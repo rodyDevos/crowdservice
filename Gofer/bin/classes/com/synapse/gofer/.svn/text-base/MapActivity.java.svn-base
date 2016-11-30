@@ -1,0 +1,1410 @@
+package com.synapse.gofer;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
+import android.location.Geocoder;
+import android.location.Location;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
+import android.view.Display;
+import android.view.Gravity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.gofer.rating.RatingProviderActivity;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.synapse.backgroud.MapUpdateListner;
+import com.synapse.backgroud.MapUpdateService;
+import com.synapse.contact.ContactActivity;
+import com.synapse.gofer.http.HttpPostConnector;
+import com.synapse.gofer.model.JobBean;
+import com.synapse.gofer.model.JobData;
+import com.synapse.gofer.model.JobsModel;
+import com.synapse.gofer.model.ResultData;
+import com.synapse.gofer.model.UserDetail;
+import com.synapse.gofer.model.notification;
+import com.synapse.gofer.parser.DataPostParser;
+import com.synapse.gofer.parser.JobbidParser;
+import com.synapse.gofer.parser.JobsPostParser;
+import com.synapse.gofer.service.MyLocation;
+import com.synapse.gofer.util.Constants;
+import com.synapse.gofer.util.Utils;
+import com.synapse.gofer.widget.BadgeButton;
+
+public class MapActivity extends FragmentActivity implements OnClickListener,
+		MapUpdateListner, OnInfoWindowClickListener {
+
+	// Google Map
+	private GoogleMap googleMap;
+	Handler handle;
+	private TextView txtSetting, txtContact, textRequest, textProvide,
+			btnClickThrough;
+	private BadgeButton txtViewJobs;
+	public static final int SUCCESS = 1;
+	public static final int FAILURE = 2;
+	private int requestForService = 1;
+	private MyLocation myLocation;
+	Context context;
+
+	public static final int CUSTOMER_MARKER = 200;
+	public static final int COURIER_MARKER = 201;
+	public static final int JOB_MARKER = 203;
+	public static final int ACTIVE_COURIER = 204;
+	public static final int ACTIVE_CUSTOMER = 205;
+
+	private ArrayList<JobsModel> jobsModelList;
+	private ProgressDialog progressBar = null;
+
+	private Timer activeJobUpdateTimer = null;
+	private boolean activityVisible = true;
+	private String number_of_activeJob = "";
+	private LinearLayout layoutDialogGofer = null;
+	Dialog dialogMarkerUserOption = null;
+	private boolean isActiveJob = false;
+	Handler mapservicehandler;
+	private static List<BroadcastReceiver> receivers = new ArrayList<BroadcastReceiver>();
+
+	// /**Called when the activity is first created.*/
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		// TODO Auto-generated method stub
+		setContentView(R.layout.activity_map);
+
+		context = this;
+		Log.e("Send", "User ID " + Constants.uid + " Name "
+				+ Constants.username);
+		getScreenScales();
+		if (MapUpdateService.self == null) {
+
+			startService(new Intent(MapActivity.this, MapUpdateService.class));
+		}
+
+		myLocation = new MyLocation() {
+			public void locationClick() {
+				myLocation.getLocation(MapActivity.this, locationResult);
+			}
+
+			LocationResult locationResult = new LocationResult() {
+				@Override
+				public void gotLocation(final Location location) {
+					if (location != null) {
+						Constants.lat = String.valueOf(location.getLatitude());
+						Constants.lon = String.valueOf(location.getLongitude());
+						Geocoder geocoder = new Geocoder(MapActivity.this);
+						try {
+							Constants.locationAdd = Utils
+									.getfullAddres((geocoder.getFromLocation(
+											location.getLatitude(),
+											location.getLongitude(), 1)).get(0));
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						MapActivity.this.runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+
+								if (MapUpdateService.self != null) {
+									MapUpdateService.self
+											.setOnUpdateListener(null);
+								}
+								if (activeJobUpdateTimer == null)
+									activeJobUpdateTimer = new Timer();
+								else {
+									activeJobUpdateTimer.cancel();
+									activeJobUpdateTimer.purge();
+									activeJobUpdateTimer = new Timer();
+								}
+
+								activeJobUpdateTimer.schedule(
+										new MapUpdateWithActiveUser(), 1000,
+										Constants.mapRefreshRate);
+								SettingsActivity.enableTrafficButton = true;
+
+								if (MapUpdateService.self != null) {
+									MapUpdateService.self
+											.setOnUpdateListener(MapActivity.this);
+									MapUpdateService.self.changeRefreshRate(
+											Constants.mapRefreshRate, 0);
+
+								}
+
+								if (activeJobUpdateTimer != null) {
+									activeJobUpdateTimer.cancel();
+									activeJobUpdateTimer.purge();
+									activeJobUpdateTimer = null;
+								}
+
+								handle = new Handler();
+								handle.postDelayed(new Runnable() {
+
+									@Override
+									public void run() {
+										// TODO Auto-generated method stub
+
+										SharedPreferences pref = getSharedPreferences(
+												"goffer_pref",
+												Context.MODE_PRIVATE);
+										Constants.mapRefreshRate = pref
+												.getLong("maprefresh_rate",
+														60000);
+										if (MapUpdateService.self != null)
+											MapUpdateService.self
+													.changeRefreshRate(Constants.mapRefreshRate);
+
+									}
+								}, 10000);
+
+								// builder.create().show();
+							}
+						});
+
+					} else {
+						MapActivity.this.runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+								AlertDialog.Builder builder = new AlertDialog.Builder(
+										MapActivity.this);
+								builder.setMessage("Goffer wants to access your location, Please enable location service");
+								builder.setNeutralButton("Ok",
+										new DialogInterface.OnClickListener() {
+											@Override
+											public void onClick(
+													DialogInterface dialog,
+													int which) {
+												dialog.dismiss();
+											}
+										});
+								// builder.create().show();
+							}
+						});
+					}
+					myLocation.closeListeners();
+				}
+			};
+		};
+		myLocation.locationClick();
+
+		// Getting screen width and height
+
+		initViews();
+
+		SharedPreferences pref = getSharedPreferences("goffer_pref",
+				Context.MODE_PRIVATE);
+		long flag = pref.getLong("tipDisplayDate", -1);
+
+		if (Constants.isNetAvailable(MapActivity.this)) {
+			if (flag != -1) {
+				Date currentDate = new Date();
+				Date lastDate = new Date(flag);
+				if (lastDate.compareTo(currentDate) > 0)
+					new TipForTheDay(this).execute("");
+			} else {
+				new TipForTheDay(this).execute("");
+			}
+		} else {
+			Constants.NoInternetError(MapActivity.this);
+		}
+		progressBar = new ProgressDialog(this);
+
+		handlePushIntent();
+
+		if (Constants.DEVELOPING_MODE && !Constants.DEVELOPING_MODE_ALERT) {
+			Toast.makeText(MapActivity.this, "Welcome to Development Mode",
+					Toast.LENGTH_LONG).show();
+			Constants.DEVELOPING_MODE_ALERT = true;
+		}
+		if (!isReceiverRegistered(mMessageReceiver)) {
+			LocalBroadcastManager.getInstance(this).registerReceiver(
+					mMessageReceiver, new IntentFilter("custom-event-name"));
+			receivers.add(mMessageReceiver);
+		}
+
+		try {
+			if (getIntent().getStringExtra("ismap").equals("yes")) {
+
+				notification _notification = (notification) getIntent()
+						.getSerializableExtra("notification");
+
+				if (getIntent().getStringExtra("status").equals("12")) {
+
+					String message = getIntent().getStringExtra("message");
+
+					Utils.displayCustomAgreeAlert(MapActivity.this, message,
+							getString(R.string.app_alert_title) + "-"
+									+ _notification.getJobname(), _notification);
+				} else if (getIntent().getStringExtra("status").equals("6")) {
+
+					Intent jobCompleteIntent = new Intent(context,
+							RatingProviderActivity.class);
+					String jobId = _notification.getJobid();
+					String toRateId = _notification.getTo_id();
+
+					jobCompleteIntent.putExtra("completedJobId", jobId);
+					jobCompleteIntent.putExtra("completedJobuserId", toRateId);
+					context.startActivity(jobCompleteIntent);
+				} else {
+					String message = getIntent().getStringExtra("message");
+
+					if (_notification.getMsgType().equals("11")) {
+						Utils.displayCustomOkAlertRedirect(MapActivity.this,
+								_notification.getMessage(),
+								getString(R.string.app_alert_title) + "-"
+										+ _notification.getJobname(),
+								_notification);
+					} else if (_notification.getMsgType().equals("10")) {
+						Utils.displayCustomOkAlert(MapActivity.this, message,
+								getString(R.string.txtalert_bid_0));
+					} else if (_notification.getMsgType().equals("0")) {
+						Utils.displayCustomOkAlert(MapActivity.this,
+								_notification.getMessage(),
+								getString(R.string.txtalert_bid_0));
+					} else if (_notification.getMsgType().equals("1")) {
+						Utils.displayCustomOkAlert(MapActivity.this,
+								_notification.getMessage(),
+								getString(R.string.txtalert_bid_1));
+					}
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			// Get extra data included in the Intent
+
+			notification _notification = (notification) intent
+					.getSerializableExtra("notification");
+
+			String message = intent.getStringExtra("message");
+
+			if (_notification.getMsgType().equals("11")) {
+				Utils.displayCustomOkAlertRedirect(MapActivity.this,
+						_notification.getMessage(),
+						getString(R.string.app_alert_title) + "-"
+								+ _notification.getJobname(), _notification);
+			} else if (_notification.getMsgType().equals("12")) {
+				Utils.displayCustomAgreeAlert(MapActivity.this, message,
+						getString(R.string.app_alert_title) + "-"
+								+ _notification.getJobname(), _notification);
+			} else if (_notification.getMsgType().equals("10")) {
+				Utils.displayCustomOkAlert(MapActivity.this, message,
+						getString(R.string.txtalert_bid_0));
+			} else if (_notification.getMsgType().equals("0")) {
+				Utils.displayCustomOkAlert(MapActivity.this,
+						_notification.getMessage(),
+						getString(R.string.txtalert_bid_0));
+			} else if (_notification.getMsgType().equals("1")) {
+				Utils.displayCustomOkAlert(MapActivity.this,
+						_notification.getMessage(),
+						getString(R.string.txtalert_bid_1));
+			} else if (_notification.getMsgType().equals("6")) {
+				Intent jobCompleteIntent = new Intent(MapActivity.this,
+						RatingProviderActivity.class);
+				jobCompleteIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				String jobId = _notification.getJobid();
+				String toRateId = _notification.getTo_id();
+
+				jobCompleteIntent.putExtra("completedJobId", jobId);
+				jobCompleteIntent.putExtra("completedJobuserId", toRateId);
+				context.startActivity(jobCompleteIntent);
+			}
+
+			// Toast.makeText(getApplicationContext(), "msg >> " + message,
+			// Toast.LENGTH_SHORT).show();
+		}
+	};
+
+	/*
+	 * Called To initialize to user interface.
+	 */
+	private void initViews() {
+
+		if (googleMap == null) {
+			googleMap = ((SupportMapFragment) getSupportFragmentManager()
+					.findFragmentById(R.id.map)).getMap();
+			if (googleMap == null) {
+				Toast.makeText(getApplicationContext(),
+						"Sorry! unable to create maps", Toast.LENGTH_SHORT)
+						.show();
+			}
+		}
+		if (googleMap != null) {
+			googleMap.getUiSettings().setZoomControlsEnabled(false);
+			googleMap.setInfoWindowAdapter(new MarkerInfoWindow());
+			googleMap.setOnInfoWindowClickListener(this);
+
+		}
+
+		textRequest = (TextView) findViewById(R.id.textRequest);
+		textProvide = (TextView) findViewById(R.id.textProvide);
+		txtSetting = (TextView) findViewById(R.id.labelSettings);
+
+		txtContact = (TextView) findViewById(R.id.labelContact);
+		txtViewJobs = (BadgeButton) findViewById(R.id.labelViewjobs);
+		btnClickThrough = (TextView) findViewById(R.id.badgebtn_btn);
+		textRequest.setOnClickListener(this);
+		textProvide.setOnClickListener(this);
+		txtSetting.setOnClickListener(this);
+
+		txtContact.setOnClickListener(this);
+		// txtViewJobs.setOnClickListener(this);
+		btnClickThrough.setOnClickListener(this);
+
+		// @Ashish
+		LinearLayout linearlayout1 = (LinearLayout) findViewById(R.id.linearlayout1);
+		RelativeLayout badgebtn_rl = (RelativeLayout) findViewById(R.id.badgebtn_rl);
+		FrameLayout.LayoutParams head_params = (FrameLayout.LayoutParams) badgebtn_rl
+				.getLayoutParams();
+		head_params.setMargins(0, 3, Constants.display_width / 14, 0); // substitute
+																		// parameters
+																		// for
+																		// left,
+																		// top,
+																		// right,
+																		// bottom
+		badgebtn_rl.setLayoutParams(head_params);
+		linearlayout1.getLayoutParams().height = Constants.display_height / 10;
+
+		txtSetting.getLayoutParams().width = Constants.display_width / 4;
+		textRequest.getLayoutParams().width = Constants.display_width / 4;
+		textProvide.getLayoutParams().width = Constants.display_width / 4;
+		txtViewJobs.getLayoutParams().width = Constants.display_width / 4;
+
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+
+		if (Constants.isNetAvailable(MapActivity.this)) {
+			new ViewUserContacts().execute("", "", "");
+		} else {
+			Constants.NoInternetError(MapActivity.this);
+		}
+
+		if (googleMap == null) {
+			if (!Constants.DEVELOPING_MODE
+					|| Constants.DEVELOPING_MODE_DEVICE.equals("phone")) // if
+																			// application
+																			// in
+																			// developing
+																			// mode
+																			// then
+																			// below
+																			// line
+																			// of
+																			// code
+																			// will
+																			// not
+																			// execute.
+				googleMap.clear();
+		}
+	}
+
+	private void handlePushIntent() {
+		boolean isFromPush = getIntent().getBooleanExtra("isFromPush", false);
+		if (isFromPush) {
+			int msgType = getIntent().getIntExtra("msgType", -1);
+			if (msgType == 5) {
+				String isReply = getIntent().getStringExtra("reply");
+				if (isReply.equalsIgnoreCase("YES"))
+					displayReplyDialog();
+				else
+					displayNoReplyDialog();
+
+			} else if (msgType == 3) {
+				String jobName = getIntent().getStringExtra("jobName");
+				String userName = getIntent().getStringExtra("username");
+				String msg = getIntent().getStringExtra("message");
+
+				displayPushAlert(jobName, msg);
+			} else if (msgType == 6) {
+
+				String messageToDisplay = getIntent().getStringExtra(
+						"from_name")
+						+ "has completed "
+						+ getIntent().getStringExtra("jobName");
+
+				String status = getIntent().getStringExtra("status");
+				if (status.equalsIgnoreCase("pending")) {
+					displayPushAlert(getIntent().getStringExtra("jobName"),
+							messageToDisplay);
+				} else {
+					Intent jobCompleteIntent = new Intent(MapActivity.this,
+							RatingProviderActivity.class);
+					jobCompleteIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					String jobId = getIntent().getStringExtra("job_id");
+					String toRateId = getIntent().getStringExtra("to_id");
+
+					jobCompleteIntent.putExtra("completedJobId", jobId);
+					jobCompleteIntent.putExtra("completedJobuserId", toRateId);
+					startActivity(jobCompleteIntent);
+
+				}
+
+			}
+
+		}
+	}
+
+	private void displayReplyDialog() {
+
+		final String fromId = getIntent().getStringExtra("from_id");
+		String username = getIntent().getStringExtra("username");
+		final String jobId = getIntent().getStringExtra("job_id");
+		final String message = getIntent().getStringExtra("message");
+		final String toId = getIntent().getStringExtra("to_id");
+		final String jobName = getIntent().getStringExtra("jobName");
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Gofer - " + jobName);
+		builder.setMessage(username + "has asked query : " + message);
+
+		final EditText input = new EditText(this);
+		input.setHint("Enter Reply");
+
+		LinearLayout ll = new LinearLayout(this);
+
+		ll.setGravity(Gravity.CENTER);
+		ll.addView(input);
+		builder.setView(ll);
+
+		builder.setPositiveButton("Reply",
+				new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+
+						if (Constants.isNetAvailable(MapActivity.this)) {
+							new ServerCommunicationSendMessage().execute(toId,
+									fromId, jobId, input.getText().toString(),
+									"NO");
+						} else {
+							Constants.NoInternetError(MapActivity.this);
+						}
+
+						dialog.dismiss();
+					}
+				});
+		builder.setNegativeButton("Cancel",
+				new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+				});
+		builder.create().show();
+
+	}
+
+	private void displayNoReplyDialog() {
+		String fromId = getIntent().getStringExtra("from_id");
+		String username = getIntent().getStringExtra("username");
+		String jobId = getIntent().getStringExtra("job_id");
+		String message = getIntent().getStringExtra("message");
+		String toId = getIntent().getStringExtra("to_id");
+		final String jobName = getIntent().getStringExtra("jobName");
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Gofer - " + jobName);
+		builder.setMessage(username + "has send reply" + message);
+		builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+
+				dialog.dismiss();
+			}
+		});
+
+		builder.create().show();
+	}
+
+	private void displayPushAlert(String jobName, String message) {
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Gofer - " + jobName);
+		builder.setMessage(message);
+		builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+
+				dialog.dismiss();
+			}
+		});
+
+		builder.create().show();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		activityVisible = true;
+
+		Constants.TempEndAddress = "";
+		Constants.TempEndTime = "";
+		Constants.TempAddress = "";
+		Constants.TempTime = "";
+
+		// googleMap.setMyLocationEnabled(true);
+		if (Constants.lat != null && !Constants.lat.equals("")
+				&& Constants.lon != null && !Constants.lon.equals("")) {
+			if (!Constants.DEVELOPING_MODE
+					|| Constants.DEVELOPING_MODE_DEVICE.equals("phone")) // if
+																			// application
+																			// in
+																			// developing
+																			// mode
+																			// then
+																			// below
+																			// line
+																			// of
+																			// code
+																			// will
+																			// not
+																			// execute.
+				googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
+						new LatLng(Double.parseDouble(Constants.lat), Double
+								.parseDouble(Constants.lon)),
+						Constants.mapRadius));
+		}
+
+		if (!isReceiverRegistered(mMessageReceiver)) {
+			LocalBroadcastManager.getInstance(this).registerReceiver(
+					mMessageReceiver, new IntentFilter("custom-event-name"));
+		}
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		activityVisible = false;
+		if (dialogMarkerUserOption != null) {
+			dialogMarkerUserOption.dismiss();
+		}
+
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		if (v == txtSetting) {
+			startActivity(new Intent(MapActivity.this, SettingsActivity.class));
+		} else if (v == textRequest) {
+			requestForService = 1;
+			doSubmit("Making you customer");
+		} else if (v == textProvide) {
+			requestForService = 0;
+			doSubmit("Making you courier");
+		} else if (v == btnClickThrough) {
+			startActivity(new Intent(MapActivity.this, ViewJobsActivity.class));
+			// startActivity(new Intent(MapActivity.this,
+			// RatingActivity.class));
+		} else if (v == txtContact) {
+			openCC("", "");
+		}
+
+	}
+
+	private void openCC(String uId, String userName) {
+		if (jobsModelList != null && jobsModelList.size() > 0) {
+			JobsModel jobs = (JobsModel) jobsModelList.get(0);
+			JobData data[] = jobs.getJobData();
+
+			// Log.e("TAGG", "JobData>>  " + data.length);
+
+			if (!uId.equals("") && !userName.equals("")) {
+				Intent intent = new Intent(MapActivity.this,
+						ContactActivity.class);
+				intent.putExtra("UserName", userName);
+				intent.putExtra("ShieldType", "");
+				intent.putExtra("UserID", uId);
+				intent.putExtra("profileimage", "");
+				startActivity(intent);
+			} else if (jobs.getJobData() != null
+					&& jobs.getJobData().length == 1) {
+				Intent intent = new Intent(MapActivity.this,
+						ContactActivity.class);
+				intent.putExtra("UserName", data[0].getUser().getUsername());
+				intent.putExtra("ShieldType", data[0].getUser().getSecurity());
+				intent.putExtra("UserID", data[0].getUser().getId());
+				intent.putExtra("profileimage", data[0].getProfileImgUrl());
+				startActivity(intent);
+			} else {
+				openUserList();
+			}
+		}
+
+	}
+
+	/*
+	 * private void findGoferDialog() {
+	 * layoutDialogGofer=(LinearLayout)findViewById(R.id.layoutDialogGofer);
+	 * TextView textRequest = (TextView)findViewById(R.id.textRequest); TextView
+	 * textProvide = (TextView)findViewById(R.id.textProvide);
+	 * textRequest.setOnClickListener(new OnClickListener() {
+	 * 
+	 * @Override public void onClick(View v) {
+	 * 
+	 * layoutDialogGofer.setVisibility(View.INVISIBLE); requestForService = 1;
+	 * doSubmit("Making you customer"); } }); textProvide.setOnClickListener(new
+	 * OnClickListener() {
+	 * 
+	 * @Override public void onClick(View v) {
+	 * layoutDialogGofer.setVisibility(View.INVISIBLE); requestForService = 0;
+	 * doSubmit("Making you courier");
+	 * 
+	 * } }); layoutDialogGofer.setVisibility(View.VISIBLE); }
+	 */
+
+	@Override
+	public void onBackPressed() {
+		if (layoutDialogGofer != null
+				&& layoutDialogGofer.getVisibility() == View.VISIBLE)
+			layoutDialogGofer.setVisibility(View.GONE);
+		else
+			super.onBackPressed();
+	}
+
+	/*
+	 * Handler.
+	 */
+	private Handler handler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			super.handleMessage(msg);
+			if (msg.arg1 == SUCCESS) {
+				if (msg.obj instanceof ResultData) {
+					ResultData data = (ResultData) msg.obj;
+					if (data.getAuthenticated() != null
+							&& data.getAuthenticated().equalsIgnoreCase(
+									"success")) {
+						Intent intent = new Intent(MapActivity.this,
+								FindGoferActivity.class);
+						intent.putExtra("requestForService", requestForService);
+						startActivity(intent);
+
+					} else {
+						// showAlertDialog(data.getMessage());
+					}
+				}
+			} else if (msg.arg1 == FAILURE) {
+				Toast.makeText(MapActivity.this, "Please try again.",
+						Toast.LENGTH_SHORT).show();
+			}
+		}
+	};
+
+	/*
+	 * To Submit Record.
+	 */
+	private void doSubmit(String message) {
+		final ProgressDialog progressBar = new ProgressDialog(MapActivity.this);
+		progressBar.setMessage(message);
+		progressBar.show();
+
+		Thread thr = new Thread(new Runnable() {
+			// @Override
+			public void run() {
+				ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+				nameValuePairs.add(new BasicNameValuePair("id", Constants.uid));
+				nameValuePairs.add(new BasicNameValuePair("is_customer", "2"));
+
+				DataPostParser parser = new DataPostParser(Constants.HTTP_HOST
+						+ "updateuser");
+				ResultData postdata = parser.getParseData(nameValuePairs);
+				progressBar.dismiss();
+
+				Message msg = handler.obtainMessage();
+				if (postdata != null) {
+					msg.obj = postdata;
+					msg.arg1 = SUCCESS;
+				} else {
+					msg.arg1 = FAILURE;
+				}
+				handler.sendMessage(msg);
+			}
+		});
+		thr.start();
+	}
+
+	private void showAlertDialog(String s) {
+		Context context = MapActivity.this.getApplicationContext();
+		int duration = Toast.LENGTH_SHORT;
+		Toast toast = Toast.makeText(context, s, duration);
+		toast.show();
+	}
+
+	@Override
+	protected void onStop() {
+		if (MapUpdateService.self != null)
+			MapUpdateService.self.setOnUpdateListener(null);
+		super.onStop();
+	}
+
+	@Override
+	public void updateStart() {
+		runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				// progressBar.setMessage("Getting new values...");
+				// progressBar.show();
+				Toast t = Toast.makeText(MapActivity.this,
+						"Getting new values...", Toast.LENGTH_LONG);
+				t.setGravity(Gravity.CENTER, 0, 0);
+				if (activityVisible)
+					t.show();
+			}
+		});
+
+	}
+
+	@Override
+	public void updateEnd() {
+		runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+
+				if (googleMap != null) {
+					googleMap.clear();
+					displayNormalUser();
+					if (SettingsActivity.showTraffic)
+						displayActiveUser();
+				}
+
+			}
+		});
+
+	}
+
+	private synchronized void displayNormalUser() {
+		ArrayList<UserDetail> courierList = Constants.courierArray;
+		if (courierList != null) {
+			for (UserDetail userDetail : courierList) {
+
+				String lat = userDetail.getLatitude();
+				String lon = userDetail.getLongitude();
+				String uName = userDetail.getUsername();
+				String location = userDetail.getLocation();
+
+				if (lat != null && !lat.equalsIgnoreCase("null")
+						&& !lat.equalsIgnoreCase("") && lon != null
+						&& !lon.equalsIgnoreCase("null")
+						&& !lon.equalsIgnoreCase("")) {
+					String snippet = location + "#" + userDetail.getId() + "#"
+							+ ACTIVE_CUSTOMER;// lat + ", " + lon;
+					LatLng latLng = new LatLng(Double.parseDouble(lat),
+							Double.parseDouble(lon));
+
+					googleMap.addMarker(createMarker(uName, snippet, latLng,
+							ACTIVE_CUSTOMER));
+
+					// builder.include(latLng);
+				}
+			}
+
+			if (!Constants.username.equalsIgnoreCase("")
+					&& Constants.userType == 3) {
+				String snippet1 = Constants.locationAdd + "#" + Constants.uid
+						+ "#" + ACTIVE_CUSTOMER;// lat + ", " + lon;
+				LatLng latLng = new LatLng(Double.parseDouble(Constants.lat),
+						Double.parseDouble(Constants.lon));
+				googleMap.addMarker(createMarker(Constants.username, snippet1,
+						latLng, ACTIVE_CUSTOMER));
+
+			}
+
+		}
+
+		ArrayList<UserDetail> customerList = Constants.customerArray;
+		if (customerList != null) {
+			for (UserDetail userDetail : customerList) {
+
+				String lat = userDetail.getLatitude();
+				String lon = userDetail.getLongitude();
+				String uName = userDetail.getUsername();
+				String location = userDetail.getLocation();
+
+				if (lat != null && !lat.equalsIgnoreCase("null")
+						&& !lat.equalsIgnoreCase("") && lon != null
+						&& !lon.equalsIgnoreCase("null")
+						&& !lon.equalsIgnoreCase("")) {
+					String snippet = location + "#" + userDetail.getId() + "#"
+							+ CUSTOMER_MARKER;// lat + ", " + lon;
+					LatLng latLng = new LatLng(Double.parseDouble(lat),
+							Double.parseDouble(lon));
+					googleMap.addMarker(createMarker(uName, snippet, latLng,
+							CUSTOMER_MARKER));
+					// builder.include(latLng);
+				}
+			}
+			if (!Constants.username.equalsIgnoreCase("")
+					&& Constants.userType == 2) {
+				String snippet1 = Constants.locationAdd + "#" + Constants.uid
+						+ "#" + CUSTOMER_MARKER;// lat + ", " + lon;
+				LatLng latLng = new LatLng(Double.parseDouble(Constants.lat),
+						Double.parseDouble(Constants.lon));
+				googleMap.addMarker(createMarker(Constants.username, snippet1,
+						latLng, CUSTOMER_MARKER));
+
+			}
+		}
+
+		ArrayList<JobData> jobsArray = Constants.jobsArray;
+		if (jobsArray != null) {
+			for (JobData jobData : jobsArray) {
+
+				JobBean bean = jobData.getJob();
+
+				String lat = bean.getStartLatitude();
+				String lon = bean.getStartlongitude();
+				String name = bean.getName();
+
+				if (lat != null && !lat.equalsIgnoreCase("null")
+						&& !lat.equalsIgnoreCase("") && lon != null
+						&& !lon.equalsIgnoreCase("null")
+						&& !lon.equalsIgnoreCase("")) {
+					String snippet = bean.getToLocation() + "#" + bean.getId()
+							+ "#" + JOB_MARKER;// lat + ", " + lon;
+					LatLng latLng = new LatLng(Double.parseDouble(lat),
+							Double.parseDouble(lon));
+					googleMap.addMarker(createMarker(name, snippet, latLng,
+							JOB_MARKER));
+				}
+
+			}
+		}
+	}
+
+	private MarkerOptions createMarker(String title, String snippet,
+			LatLng lng, int markerType) {
+		MarkerOptions markeroption = new MarkerOptions();
+		markeroption.position(lng);
+		markeroption.snippet(snippet);
+		markeroption.title(title);
+		if (markerType == COURIER_MARKER) {
+			markeroption.icon(BitmapDescriptorFactory
+					.fromResource(R.drawable.courier_map_marker));
+
+		} else if (markerType == CUSTOMER_MARKER) {
+			markeroption.icon(BitmapDescriptorFactory
+					.fromResource(R.drawable.provider_map_marker));
+
+		} else if (markerType == JOB_MARKER) {
+			markeroption.icon(BitmapDescriptorFactory
+					.fromResource(R.drawable.job_map_marker));
+			markeroption.visible(false);
+		} else if (markerType == ACTIVE_COURIER) {
+			markeroption.icon(BitmapDescriptorFactory
+					.fromResource(R.drawable.active_courier));
+		} else if (markerType == ACTIVE_CUSTOMER) {
+			markeroption.icon(BitmapDescriptorFactory
+					.fromResource(R.drawable.cutomer_map_marker));
+		}
+		return markeroption;
+	}
+
+	@Override
+	protected void onDestroy() {
+		if (MapUpdateService.self != null) {
+			MapUpdateService.self.stopSelf();
+		}
+		LocalBroadcastManager.getInstance(this).unregisterReceiver(
+				mMessageReceiver);
+		super.onDestroy();
+	}
+
+	private class ViewUserContacts extends AsyncTask<String, String, String> {
+
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+		}
+
+		@Override
+		protected String doInBackground(String... params) {
+			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+			nameValuePairs
+					.add(new BasicNameValuePair("user_id", Constants.uid));
+			if (Constants.userType == 3)
+				nameValuePairs.add(new BasicNameValuePair("search_type",
+						"job_apply_by_id"));
+			else if (Constants.userType == 2)
+				nameValuePairs.add(new BasicNameValuePair("search_type",
+						"job_posted_by_id"));
+
+			HttpPostConnector conn = new HttpPostConnector(Constants.HTTP_HOST
+					+ "checkuserjob", nameValuePairs);
+
+			String response = conn.getResponseData();
+
+			return response;
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			Log.d("Job Result", result);
+
+			if (result != null && result.length() > 0) {
+				try {
+					JSONObject jsonObject = new JSONObject(result);
+					String str = "No";
+					if (jsonObject.has("is_active"))
+						str = jsonObject.getString("is_active");
+					// @Ashish
+					if (jsonObject.has("number_of_activeJob")) {
+						number_of_activeJob = jsonObject
+								.getString("number_of_activeJob");
+						if (!number_of_activeJob.equals(""))
+							showButtonWithText(R.id.labelViewjobs,
+									jsonObject.getString("number_of_activeJob"));
+					}
+					// -@-
+					if (str.equalsIgnoreCase("No")) {
+						txtContact.setVisibility(View.INVISIBLE);
+						isActiveJob = false;
+						if (MapUpdateService.self != null) {
+							MapUpdateService.self
+									.setOnUpdateListener(MapActivity.this);
+						}
+
+					} else {
+						txtContact.setVisibility(View.VISIBLE);
+						isActiveJob = true;
+						if (MapUpdateService.self != null) {
+							MapUpdateService.self.setOnUpdateListener(null);
+						}
+						if (activeJobUpdateTimer == null)
+							activeJobUpdateTimer = new Timer();
+						else {
+							activeJobUpdateTimer.cancel();
+							activeJobUpdateTimer.purge();
+							activeJobUpdateTimer = new Timer();
+						}
+
+						activeJobUpdateTimer.schedule(
+								new MapUpdateWithActiveUser(), 1000,
+								Constants.mapRefreshRate);
+						SettingsActivity.enableTrafficButton = true;
+						if (SettingsActivity.showTraffic) {
+							if (MapUpdateService.self != null) {
+								MapUpdateService.self
+										.setOnUpdateListener(MapActivity.this);
+								MapUpdateService.self.changeRefreshRate(
+										Constants.mapRefreshRate, 0);
+							}
+						}
+
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+			}
+
+		}
+	}
+
+	private void openUserList() {
+		AlertDialog.Builder petbuilder = new AlertDialog.Builder(this);
+		if (Constants.userType == 2) {
+			petbuilder.setTitle("Choose Courrier");
+		} else {
+			petbuilder.setTitle("Choose Customer");
+		}
+		JobsModel jobs = (JobsModel) jobsModelList.get(0);
+
+		final JobData data[] = jobs.getJobData();
+		final String users[] = new String[data.length];
+		for (int i = 0; i < data.length; i++) {
+			UserDetail detail = data[i].getUser();
+			users[i] = detail.getUsername();
+		}
+		petbuilder.setItems(users, new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				UserDetail detail = data[which].getUser();
+				Intent intent = new Intent(MapActivity.this,
+						ContactActivity.class);
+				intent.putExtra("UserName", detail.getUsername());
+				intent.putExtra("UserID", detail.getId());
+				intent.putExtra("profileimage", data[which].getProfileImgUrl());
+				startActivity(intent);
+			}
+		});
+
+		petbuilder.setNegativeButton("Cancel",
+				new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+				});
+		AlertDialog petdialog = petbuilder.create();
+		petdialog.show();
+	}
+
+	private class MapUpdateWithActiveUser extends TimerTask {
+		// ProgressDialog progressBar1 = new ProgressDialog(MapActivity.this);
+		@Override
+		public void run() {
+			runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					// progressBar1.setMessage("Getting new values...");
+					// progressBar1.show();
+					Toast t = Toast.makeText(MapActivity.this,
+							"Getting new values...", Toast.LENGTH_LONG);
+					t.setGravity(Gravity.CENTER, 0, 0);
+					if (activityVisible)
+						t.show();
+				}
+			});
+
+			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+			nameValuePairs
+					.add(new BasicNameValuePair("user_id", Constants.uid));
+			nameValuePairs.add(new BasicNameValuePair("user_type", String
+					.valueOf(Constants.userType)));
+			nameValuePairs.add(new BasicNameValuePair("location",
+					Constants.locationAdd));
+			nameValuePairs
+					.add(new BasicNameValuePair("latitude", Constants.lat));
+			nameValuePairs.add(new BasicNameValuePair("longitude",
+					Constants.lon));
+			JobsPostParser jobsParser = new JobsPostParser(Constants.HTTP_HOST
+					+ "viewUserContacts");
+			jobsModelList = jobsParser.getParseData(nameValuePairs);
+			Constants.jobsModelList = jobsModelList;
+			if (jobsModelList != null && jobsModelList.size() > 0) {
+				JobsModel model = (JobsModel) jobsModelList.get(0);
+
+				final JobData data[] = model.getJobData();
+				if (Constants.userType == 2)
+					Constants.workingCourierArray = new ArrayList<UserDetail>();
+				else
+					Constants.workingCustomerArray = new ArrayList<UserDetail>();
+				if (data != null && data.length > 0) {
+					for (int i = 0; i < data.length; i++) {
+						UserDetail detail = data[i].getUser();
+						if (Constants.userType == 2)
+							Constants.workingCourierArray.add(detail);
+						else
+							Constants.workingCustomerArray.add(detail);
+					}
+				}
+				runOnUiThread(new Runnable() {
+
+					@Override
+					public void run() {
+						if (googleMap != null) {
+							googleMap.clear();
+							displayActiveUser();
+							if (SettingsActivity.showTraffic)
+								displayNormalUser();
+						}
+					}
+				});
+			}
+
+		}
+
+	}
+
+	private synchronized void displayActiveUser() {
+
+		if (Constants.userType == 3) {
+
+			ArrayList<UserDetail> customerList = Constants.customerArray;
+			if (customerList != null && customerList.size() > 0) {
+				for (UserDetail userDetail : customerList) {
+
+					String lat = userDetail.getLatitude();
+					String lon = userDetail.getLongitude();
+					String uName = userDetail.getUsername();
+					String loc = userDetail.getLocation();
+					if (lat != null && !lat.equalsIgnoreCase("null")
+							&& !lat.equalsIgnoreCase("") && lon != null
+							&& !lon.equalsIgnoreCase("null")
+							&& !lon.equalsIgnoreCase("")) {
+						String snippet = loc + "#" + userDetail.getId() + "#"
+								+ CUSTOMER_MARKER;// lat + ", " + lon;
+						LatLng latLng = new LatLng(Double.parseDouble(lat),
+								Double.parseDouble(lon));
+						googleMap.addMarker(createMarker(uName, snippet,
+								latLng, CUSTOMER_MARKER));
+						// ----changes ACTIVE_customer instead of
+						// Customer-Markser
+					}
+				}
+
+				if (!Constants.username.equalsIgnoreCase("")) {
+					String snippet1 = Constants.locationAdd + "#"
+							+ Constants.uid + "#" + ACTIVE_CUSTOMER;// lat +
+																	// ", " +
+																	// lon;
+					LatLng latLng = new LatLng(
+							Double.parseDouble(Constants.lat),
+							Double.parseDouble(Constants.lon));
+					googleMap.addMarker(createMarker(Constants.username,
+							snippet1, latLng, ACTIVE_CUSTOMER));
+
+				}
+			}
+		} else {
+			ArrayList<UserDetail> courierList = Constants.workingCourierArray;
+			if (courierList != null && courierList.size() > 0) {
+				for (UserDetail userDetail : courierList) {
+
+					String lat = userDetail.getLatitude();
+					String lon = userDetail.getLongitude();
+					String uName = userDetail.getUsername();
+					String loc = userDetail.getLocation();
+					if (lat != null && !lat.equalsIgnoreCase("null")
+							&& !lat.equalsIgnoreCase("") && lon != null
+							&& !lon.equalsIgnoreCase("null")
+							&& !lon.equalsIgnoreCase("")) {
+						String snippet = loc + "#" + userDetail.getId() + "#"
+								+ ACTIVE_CUSTOMER;// lat + ", " + lon;
+													// //Customer_arker set
+													// instaed of Active_courier
+						LatLng latLng = new LatLng(Double.parseDouble(lat),
+								Double.parseDouble(lon));
+						googleMap.addMarker(createMarker(uName, snippet,
+								latLng, ACTIVE_CUSTOMER));
+					}
+				}
+
+				if (!Constants.username.equalsIgnoreCase("")) {
+					String snippet1 = Constants.locationAdd + "#"
+							+ Constants.uid + "#" + CUSTOMER_MARKER;// lat +
+																	// ", " +
+																	// lon;
+					LatLng latLng = new LatLng(
+							Double.parseDouble(Constants.lat),
+							Double.parseDouble(Constants.lon));
+					googleMap.addMarker(createMarker(Constants.username,
+							snippet1, latLng, CUSTOMER_MARKER));
+
+				}
+			}
+		}
+	}
+
+	private class ServerCommunicationSendMessage extends
+			AsyncTask<String, String, String> {
+
+		private final ProgressDialog progressBar = new ProgressDialog(
+				MapActivity.this);
+
+		@Override
+		protected String doInBackground(String... strParams) {
+
+			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+			nameValuePairs.add(new BasicNameValuePair("from_id", strParams[0]));
+			nameValuePairs.add(new BasicNameValuePair("to_id", strParams[1]));
+			nameValuePairs.add(new BasicNameValuePair("job_id", strParams[2]));
+			nameValuePairs.add(new BasicNameValuePair("message", strParams[3]));
+			nameValuePairs.add(new BasicNameValuePair("reply", strParams[4]));
+			JobbidParser parser = new JobbidParser(Constants.HTTP_HOST
+					+ "messaging");
+			String response = parser.getParseData(nameValuePairs);
+			return response;
+		}
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			progressBar.setCancelable(false);
+			progressBar.setMessage("Please wait...");
+			progressBar.show();
+		}
+
+		@Override
+		protected void onPostExecute(String resp) {
+			super.onPostExecute(resp);
+			progressBar.dismiss();
+
+			showAlertDialog("Replay Send");
+		}
+	}
+
+	private class MarkerInfoWindow implements InfoWindowAdapter {
+		private View view = null;
+
+		public MarkerInfoWindow() {
+			view = getLayoutInflater()
+					.inflate(R.layout.markerinfo_window, null);
+		}
+
+		@Override
+		public View getInfoContents(Marker marker) {
+			return null;
+		}
+
+		@Override
+		public View getInfoWindow(Marker marker) {
+
+			RelativeLayout ll = (RelativeLayout) view;
+			TextView title = (TextView) ll.findViewById(R.id.marker_title);
+			TextView snippet = (TextView) ll.findViewById(R.id.marker_snippet);
+
+			String strSnippet = marker.getSnippet();
+
+			title.setText(marker.getTitle());
+			snippet.setText(strSnippet.split("#")[0]);
+
+			return view;
+		}
+
+	}
+
+	@Override
+	public void onInfoWindowClick(Marker marker) {
+		String[] strSnippet = marker.getSnippet().split("#");
+		final String strId = strSnippet[1];
+		final String strType = strSnippet[2];
+		final String userName = marker.getTitle();
+
+		dialogMarkerUserOption = new Dialog(MapActivity.this);
+
+		int divierId = dialogMarkerUserOption.getContext().getResources()
+				.getIdentifier("android:id/titleDivider", null, null);
+		View divider = dialogMarkerUserOption.findViewById(divierId);
+		divider.setBackgroundDrawable(new ColorDrawable(
+				android.graphics.Color.TRANSPARENT));
+		dialogMarkerUserOption.setContentView(R.layout.popup_marker_option);
+
+		dialogMarkerUserOption.getWindow().setBackgroundDrawable(
+				new ColorDrawable(android.graphics.Color.TRANSPARENT));
+		Button btnProfile = (Button) dialogMarkerUserOption
+				.findViewById(R.id.btnMarkerProfile);
+		Button btnContact = (Button) dialogMarkerUserOption
+				.findViewById(R.id.btnMarkerContact);
+		View v1 = (View) dialogMarkerUserOption.findViewById(R.id.contactline);
+		if (userName.equalsIgnoreCase(Constants.username) || !isActiveJob) {
+			btnContact.setVisibility(View.GONE);
+			btnContact.setVisibility(View.GONE);
+		}
+		Button btnCancel = (Button) dialogMarkerUserOption
+				.findViewById(R.id.btnMarkerCancel);
+
+		btnProfile.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(MapActivity.this, MapProfile.class);
+				intent.putExtra("displayType", Integer.parseInt(strType));
+				intent.putExtra("id", strId);
+
+				startActivity(intent);
+			}
+		});
+
+		btnCancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				dialogMarkerUserOption.dismiss();
+			}
+		});
+
+		btnContact.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				// openCC();
+
+				openCC(strId, userName);
+			}
+		});
+
+		dialogMarkerUserOption.show();
+
+	}
+
+	private void showButtonWithText(int id, String text) {
+
+		BadgeButton btn = (BadgeButton) findViewById(id);
+		btn.setBadgeText(text);
+		if (!(text.equals("null")))
+			btn.showBadge();
+		else
+			btn.hideBadge();
+
+	}
+
+	public boolean isReceiverRegistered(BroadcastReceiver receiver) {
+		boolean registered = receivers.contains(receiver);
+		Log.i("Send", "is receiver " + receiver + " registered? " + registered);
+		return registered;
+	}
+
+	// -Azim-
+
+	public void getScreenScales() {
+
+		// WindowManager wm = (WindowManager)
+		// context.getSystemService(Context.WINDOW_SERVICE);
+		Display display = getWindowManager().getDefaultDisplay();
+		// Display display = wm.getDefaultDisplay();
+		Point size = new Point();
+		Constants.display_width = display.getWidth();
+		Constants.display_height = display.getHeight();
+		Log.d("Display width is : ", "" + Constants.display_width);
+		Log.d("Display height is : ", "" + Constants.display_height);
+	}
+
+}

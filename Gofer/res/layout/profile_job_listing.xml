@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/size_padding_10" >
+
+    <ImageView
+        android:id="@+id/row_job_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/add2x"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/row_job_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/row_job_next"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:text="No Category"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/star1_j"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/row_job_desc"
+        android:src="@drawable/blackstar" />
+
+    <ImageView
+        android:id="@+id/star2_j"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/row_job_desc"
+        android:layout_toRightOf="@+id/star1_j"
+        android:src="@drawable/blackstar" />
+
+    <ImageView
+        android:id="@+id/star3_j"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/row_job_desc"
+        android:layout_toRightOf="@+id/star2_j"
+        android:src="@drawable/blackstar" />
+
+    <ImageView
+        android:id="@+id/star4_j"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/row_job_desc"
+        android:layout_toRightOf="@+id/star3_j"
+        android:src="@drawable/blackstar" />
+
+    <ImageView
+        android:id="@+id/star5_j"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/row_job_desc"
+        android:layout_toRightOf="@+id/star4_j"
+        android:src="@drawable/blackstar" />
+
+</RelativeLayout>

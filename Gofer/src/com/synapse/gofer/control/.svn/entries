@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/gofer/control"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="CircleImageView.java"
+   checksum="4f52cf1974bd1496d2527dc4796a79ee"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-09T08:59:12.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="Corner.java"
+   checksum="5d282f78459c0c606e9b512d7f094447"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-23T07:58:58.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="RoundedDrawable.java"
+   checksum="87a80cd2f0469bb80e426affd142890e"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-23T08:00:00.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="RoundedImageView.java"
+   checksum="1305e517da6167eae70e21198445de84"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-25T11:55:40.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SegmentedGroup.java"
+   checksum="af2519ab26fa6d31c73eb8101a971979"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-02T09:26:40.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+</wc-entries>

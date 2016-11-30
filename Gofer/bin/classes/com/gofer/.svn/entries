@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   revision="5"
+   last-author="azim"
+   uuid="43ff5430-f338-4548-9cde-d8d8bb057534"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/gofer"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2016-01-11T13:22:45.140275Z"/>
+<entry
+   name="rating"
+   kind="dir"/>
+</wc-entries>

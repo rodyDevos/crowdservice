@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/gofer/paypal"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="PayPalActivity.java"
+   checksum="e473937484f03ef0b6a1de18140a0285"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-25T07:33:33.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+</wc-entries>

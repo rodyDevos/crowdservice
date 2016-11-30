@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#539EBF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/leftcorner"
+            android:text="Job Details"
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rightcorner_unselected"
+            android:text="Courier Details"
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <com.synapse.gofer.control.SegmentedGroup
+            android:id="@+id/segmented2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            segmentedgroup:sc_border_width="1dp"
+            segmentedgroup:sc_checked_text_color="@android:color/white"
+            segmentedgroup:sc_corner_radius="5dp"
+            segmentedgroup:sc_tint_color="@color/category_blue" >
+
+            <RadioButton
+                android:id="@+id/btnJobDetails"
+                style="@style/RadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Job Details"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <RadioButton
+                android:id="@+id/btnCustomerDetails"
+                style="@style/RadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Courier Details"
+                android:textSize="@dimen/agreement_text_text_size" />
+        </com.synapse.gofer.control.SegmentedGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/job_courier_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="90"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/accept_for_bid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="#165F8F"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Accept Bid"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="#165F8F"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/txtcontact"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/attachement" />
+    </RelativeLayout>
+
+</LinearLayout>

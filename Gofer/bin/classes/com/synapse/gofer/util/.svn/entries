@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/gofer/util"
+   uuid="43ff5430-f338-4548-9cde-d8d8bb057534"
+   committed-rev="5"
+   kind="dir"
+   committed-date="2016-01-13T13:24:35.285376Z"/>
+<entry
+   name="AppCrashLog.java"
+   checksum="97d56a7402c28231a6fc587c7fa009c4"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="Constants.java"
+   revision="7"
+   checksum="42ee4ca1c955a03ca9b9e5f1eff6d630"
+   last-author="azim"
+   text-time="2016-01-16T08:56:37.000000Z"
+   committed-rev="7"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="CustomDateTimePicker.java"
+   checksum="adec87294e943d67b462edbab9a4cbcc"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ImageLoader.java"
+   checksum="66a86fc13ed1f8c5394dc74f191b8ba5"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ImageLoaderNoProgress.java"
+   checksum="27f830ad1a01e9c0a0de153bdc5d7263"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ImageProcessing.java"
+   checksum="509766a1d21a5959f9b504aae9e3d7bf"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="Utils.java"
+   revision="6"
+   checksum="8d9ae005c4921714f2cabf0f746f9d95"
+   last-author="azim"
+   text-time="2016-01-15T09:58:35.000000Z"
+   committed-rev="6"
+   kind="file"
+   committed-date="2016-01-15T13:32:21.408000Z"/>
+</wc-entries>

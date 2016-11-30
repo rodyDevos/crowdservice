@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/contact"
+   uuid="43ff5430-f338-4548-9cde-d8d8bb057534"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2016-01-11T13:22:45.140275Z"/>
+<entry
+   name="ContactActivity.java"
+   checksum="df7199675149a0c045d4f1a8a732d99e"
+   last-author="azim"
+   text-time="2016-01-11T11:44:35.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2016-01-11T13:22:45.140000Z"/>
+<entry
+   name="ContactEditDialogActivity.java"
+   checksum="ce3a912e8ed232b130914c5094002e61"
+   last-author="azim"
+   text-time="2015-12-07T10:11:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+</wc-entries>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/gofer/swipetodelete"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SwipeMenu.java"
+   checksum="af85d054609a2ec34f6801b306ee8b1f"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-01T12:11:16.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SwipeMenuAdapter.java"
+   checksum="d3005bb7c719761f9e8beef6e038417e"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-19T07:03:50.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SwipeMenuCreator.java"
+   checksum="ffbc56b2b62e0c223488b98764cde405"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-19T07:03:50.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SwipeMenuItem.java"
+   checksum="ace8e1c6e7e99d7d5c179c769d587513"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-19T07:03:50.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SwipeMenuLayout.java"
+   checksum="aa38034ba953dc1e72c8502b104db1f2"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-19T07:03:50.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SwipeMenuListView.java"
+   checksum="038f949a6dec11abf5c1b1018dd3d7f3"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-19T07:03:50.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SwipeMenuView.java"
+   checksum="3dbc35c71b5b67c1cf8531a164741639"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-01T12:10:36.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+</wc-entries>

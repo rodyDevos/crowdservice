@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- <TextView
+        android:id="@+id/marker_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/black1_r2x"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" /> -->
+        
+    <ImageView
+        android:id="@+id/marker_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/black1r2x"
+        android:gravity="center"
+         />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/marker_time"
+        android:layout_toEndOf="@+id/marker_time"
+        android:orientation="vertical"
+        android:background="@drawable/black12x"
+        android:padding="5dp" >
+
+        <TextView
+                android:id="@+id/marker_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:minWidth="180dp"
+                android:text="test"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        
+        <!-- <LinearLayout
+            android:id="@+id/jjjj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/marker_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:minWidth="180dp"
+                android:text="test"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/marker_snippet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:minWidth="180dp"
+                android:text="test"
+                android:textColor="@android:color/white" />
+        </LinearLayout> -->
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/marker_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:layout_toEndOf="@+id/linearLayout1"
+        android:src="@drawable/go_2x"
+        android:gravity="center"
+         />
+    
+<!--     <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:background="@drawable/go_2x"
+        android:textColor="#FFFFFF" /> -->
+
+</RelativeLayout>

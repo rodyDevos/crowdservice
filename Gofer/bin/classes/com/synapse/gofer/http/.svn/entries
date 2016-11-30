@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/gofer/http"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="HttpGetConnector.java"
+   checksum="7280ae7991ec3d0bdc1ad1bc73b8309b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="HttpPostConnector.java"
+   checksum="93bddd0501e5716bf54ffc7a8a8ea685"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+</wc-entries>

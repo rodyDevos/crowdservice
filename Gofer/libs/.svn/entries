@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/libs"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="android-support-v4.jar"
+   checksum="ed257a47cae11af1a55614055b879947"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+<entry
+   name="gcm.jar"
+   checksum="5cfcca9a886c7229d7837f26151b112a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:55.000000Z"/>
+<entry
+   name="httpmime-4.1.jar"
+   checksum="e50fbffd93398c9775e50c677c1fd666"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:55.000000Z"/>
+</wc-entries>

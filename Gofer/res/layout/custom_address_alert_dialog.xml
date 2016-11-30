@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittxtborder" >
+
+        <ImageButton
+            android:id="@+id/resetfield1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:src="@android:drawable/ic_delete" />
+
+        <EditText
+            android:id="@+id/custom_alert_address1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/resetfield1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/resetfield1"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Enter Address1:"
+            android:padding="3dip"
+            android:singleLine="true"
+            android:textColor="#000000" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittxtborder" >
+
+        <EditText
+            android:id="@+id/custom_alert_address2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/resetfield2"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_toLeftOf="@+id/resetfield2"
+            android:background="@null"
+            android:hint="Enter Address2:"
+            android:padding="3dip"
+            android:singleLine="true"
+            android:textColor="#000000" />
+
+        <ImageButton
+            android:id="@+id/resetfield2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:src="@android:drawable/ic_delete" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittxtborder" >
+
+        <EditText
+            android:id="@+id/custom_alert_address3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/resetfield3"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_toLeftOf="@+id/resetfield3"
+            android:background="@null"
+            android:hint="Enter City:"
+            android:padding="3dip"
+            android:singleLine="true"
+            android:textColor="#000000" />
+
+        <ImageButton
+            android:id="@+id/resetfield3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:src="@android:drawable/ic_delete" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittxtborder" >
+
+        <EditText
+            android:id="@+id/custom_alert_address4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/resetfield4"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_toLeftOf="@+id/resetfield4"
+            android:background="@null"
+            android:hint="Enter State:"
+            android:padding="3dip"
+            android:singleLine="true"
+            android:textColor="#000000" />
+
+        <ImageButton
+            android:id="@+id/resetfield4"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:src="@android:drawable/ic_delete" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittxtborder" >
+
+        <EditText
+            android:id="@+id/custom_alert_address5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/resetfield5"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_toLeftOf="@+id/resetfield5"
+            android:background="@null"
+            android:hint="Enter Zip:"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:padding="3dip"
+            android:singleLine="true"
+            android:textColor="#000000" />
+
+        <ImageButton
+            android:id="@+id/resetfield5"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:src="@android:drawable/ic_delete" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittxtborder"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/custom_alert_done"
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blank_btn"
+                android:text="Done"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/custom_alert_cancel"
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/blank_btn"
+                android:text="Cancel"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

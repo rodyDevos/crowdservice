@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layoutPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/edtEndAddress1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbox"
+            android:hint="Enter Address 1:"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/edtEndAddress2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbox"
+            android:hint="Enter Address 2:"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/edtEndAddress3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbox"
+            android:hint="Enter Address 3:"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/edtEndAddress4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbox"
+            android:hint="Enter Address 4:"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/edtEndAddress5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbox"
+            android:hint="Enter Address 5:"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

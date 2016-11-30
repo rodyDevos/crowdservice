@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape>
+            <solid android:color="@color/bid_type_pressed" />
+
+            <stroke android:width="1dp" android:color="@color/bid_type_pressed" />
+
+            <corners android:bottomLeftRadius="3dp" android:topLeftRadius="3dp" />
+
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape></item>
+    <item android:state_focused="true"><shape>
+            <solid android:color="@color/bid_type_pressed" />
+
+            <stroke android:width="1dp" android:color="@color/bid_type_pressed" />
+
+            <corners android:bottomLeftRadius="3dp" android:topLeftRadius="3dp" />
+
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape></item>
+    <item android:state_selected="true"><shape>
+            <solid android:color="@color/bid_type_pressed" />
+
+            <stroke android:width="1dp" android:color="@color/bid_type_pressed" />
+
+            <corners android:bottomLeftRadius="3dp" android:topLeftRadius="3dp" />
+
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape></item>
+    <item><shape>
+            <gradient android:angle="270" android:endColor="@color/bid_type_normal" android:startColor="@color/bid_type_normal_light" />
+
+            <corners android:bottomLeftRadius="3dp" android:topLeftRadius="3dp" />
+
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape></item>
+
+</selector>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/res/drawable-xhdpi"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ic_launcher.png"
+   checksum="ab3f5029d81b1826e02dd200590e9409"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-10-27T12:16:18.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:49.000000Z"/>
+<entry
+   name="left.png"
+   checksum="f769aabcb66ba776a5173b122720160b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-10-26T13:16:44.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+</wc-entries>

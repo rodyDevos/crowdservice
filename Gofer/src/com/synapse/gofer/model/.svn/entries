@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/gofer/model"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="BiddingDetail.java"
+   checksum="56be4df535543256ee4c34b5023e633d"
+   last-author="azim"
+   text-time="2015-11-10T08:38:28.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="Card.java"
+   checksum="f010cf5db2f780ef6bd4306bbf4a7abf"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="Category.java"
+   checksum="48e54eb9538a08177a7916175cd26830"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="CourierModel.java"
+   checksum="a7891eec17f9229b8bbb8cf82e2e81dd"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobBean.java"
+   checksum="50a59297948ed32d8552e64da3db09c8"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobData.java"
+   checksum="f5844b7ad293ae320b1f881f0b7daf4b"
+   last-author="azim"
+   text-time="2015-11-17T05:26:48.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobProfile.java"
+   checksum="793e14ec51a83451f5386a207c9ea2d9"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobsModel.java"
+   checksum="e4f5d362d40c94157b54348a363d7d7d"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="PostParseData.java"
+   checksum="2cffe4d36daf350d1c693eab895a5036"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfileData.java"
+   checksum="88df05e4d7fbac35d18904ff62a97780"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfileJobData.java"
+   checksum="1ebfe5571a778ee94f55fc1af2fb72f2"
+   last-author="azim"
+   text-time="2015-11-04T09:26:25.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ResultData.java"
+   checksum="09dc0d7bb2b09957b2578b815c7d469b"
+   last-author="azim"
+   text-time="2015-10-30T08:55:19.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ServicesData.java"
+   checksum="36c2b5daf56a2e928a87cb3997581a42"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="UserDetail.java"
+   checksum="95a3028800a3e8ac80a67ee0d1af156d"
+   last-author="azim"
+   text-time="2015-11-26T09:52:15.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="notification.java"
+   revision="6"
+   checksum="a00e93e58e895c701bb87287dc050ff0"
+   last-author="azim"
+   text-time="2016-01-15T06:23:41.000000Z"
+   committed-rev="6"
+   kind="file"
+   committed-date="2016-01-15T13:32:21.408000Z"/>
+</wc-entries>

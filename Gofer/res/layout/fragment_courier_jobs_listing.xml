@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.synapse.gofer.control.SegmentedGroup
+        android:id="@+id/segmented2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        segmentedgroup:sc_border_width="1dp"
+        segmentedgroup:sc_checked_text_color="@android:color/white"
+        segmentedgroup:sc_corner_radius="5dp"
+        segmentedgroup:sc_tint_color="@color/category_blue" >
+
+        <RadioButton
+            android:id="@+id/btncustomer"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/ascustomer"
+            android:textSize="@dimen/agreement_text_text_size" />
+
+        <RadioButton
+            android:id="@+id/btnprovider"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/asprovider"
+            android:textSize="@dimen/agreement_text_text_size" />
+    </com.synapse.gofer.control.SegmentedGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/field_height"
+            android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+            android:background="@drawable/dropdown_bg_gray"
+            android:dropDownWidth="match_parent"
+            android:prompt="@string/spinner_title" />
+    </LinearLayout>
+
+    <com.synapse.gofer.swipetodelete.SwipeMenuListView
+        android:id="@+id/view_customer_job_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.25dp" >
+    </com.synapse.gofer.swipetodelete.SwipeMenuListView>
+
+    <com.synapse.gofer.swipetodelete.SwipeMenuListView
+        android:id="@+id/view_job_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.25dp" >
+    </com.synapse.gofer.swipetodelete.SwipeMenuListView>
+
+</LinearLayout>

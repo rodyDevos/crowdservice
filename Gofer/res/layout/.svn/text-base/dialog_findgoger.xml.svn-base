@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/customborder" >
+
+    <TextView
+        android:id="@+id/textRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request A Service"
+        android:textColor="#2E64FE" />
+
+    <TextView
+        android:id="@+id/textProvide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Provide A Service"
+        android:textColor="#2E64FE" />
+
+</LinearLayout>

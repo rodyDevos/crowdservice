@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/res/values"
+   uuid="43ff5430-f338-4548-9cde-d8d8bb057534"
+   committed-rev="5"
+   kind="dir"
+   committed-date="2016-01-13T13:24:35.285376Z"/>
+<entry
+   name="attrs.xml"
+   checksum="6a754ee992d3affb05f01db2f8dd764b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-23T08:00:59.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="colors.xml"
+   checksum="9fb12e45032ee456c541d68a10e5cf0e"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-24T11:09:31.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="dimens.xml"
+   checksum="9d5b64aeb046f2d9c9dce84d55c67334"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-02T09:25:59.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="strings.xml"
+   checksum="9d9c82a47105b1beeac98747f64f2d95"
+   last-author="azim"
+   committed-rev="5"
+   text-time="2016-01-13T07:38:48.000000Z"
+   kind="file"
+   committed-date="2016-01-13T13:24:35.285000Z"/>
+<entry
+   name="styles.xml"
+   checksum="63bb37e6ce4c64ebd356bf62227afa1c"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-09T09:49:25.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+</wc-entries>

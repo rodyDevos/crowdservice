@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/res/drawable"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activejobs_new.jpg"
+   checksum="32c1b81411f206ef77480ed2da873ceb"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:51.000000Z"/>
+<entry
+   name="alert_bg.9.png"
+   checksum="2843e46b60af875126d2e91311443ae0"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:49.000000Z"/>
+<entry
+   name="background_edittextl.xml"
+   checksum="6488f94bcf2c38c17f79898bc5ddf599"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="background_fill.xml"
+   checksum="2711fd58a5fa99c37aade6be252b4903"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="background_fill_image.xml"
+   checksum="cf1dd3dbf6d7278b4a40080991d2826a"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="background_fill_marker.xml"
+   checksum="aefdaa0c9648669ce4a8017ac880fa77"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="background_fill_ocean.xml"
+   checksum="92c0baa5ca98899edcdd297385c6358e"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="badge_button.xml"
+   checksum="de3a6943fc69f9f7b1041489b9b08498"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="bgred.xml"
+   checksum="7208d8780d7bc44ffb544198a2ac8b5d"
+   last-author="azim"
+   text-time="2015-11-24T11:19:12.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="bgwhite.xml"
+   checksum="e8af5501dd3315a8b9f2cb7b211ccee3"
+   last-author="azim"
+   text-time="2015-11-23T09:40:44.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="bid_type_bg.xml"
+   checksum="976a8633edeecf32fd64760890d62b80"
+   last-author="azim"
+   text-time="2015-11-02T10:37:14.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="bid_type_left.xml"
+   checksum="ef9e214d61f3ff029468c07ccc4c79a6"
+   last-author="azim"
+   text-time="2015-11-04T06:36:22.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="bid_type_right.xml"
+   checksum="5fa6e9d755c87bd6b016899ddfa7527d"
+   last-author="azim"
+   text-time="2015-11-04T06:31:21.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="black1.png"
+   checksum="9bb783e702a353ca15dfa74019b0e282"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:55.000000Z"/>
+<entry
+   name="blue_top_bar.xml"
+   checksum="ee8eae6297f9ffda72b95a3f2a2024da"
+   last-author="azim"
+   text-time="2015-11-27T10:31:42.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="border.xml"
+   checksum="be7cedbc1bda0bce284e872d855b4ec7"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="button.xml"
+   checksum="41d2a2d6d1e6dd3b06451c7401196934"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="button_bg_normal.9.png"
+   checksum="b430c27fc99c74416a9b3592774cf5cf"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+<entry
+   name="button_bg_pressed.9.png"
+   checksum="58e0abea4ae889fe69b3b65663d9fa5d"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:54.000000Z"/>
+<entry
+   name="button_text_color.xml"
+   checksum="58d4609ca2038eca32e77979155d51ad"
+   last-author="azim"
+   text-time="2015-11-02T09:36:08.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_button_check.xml"
+   checksum="7450aaa2185a3b0e64927a065c7b9592"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_button_check_off.png"
+   checksum="d218f16bc3c2d7e4d216fcfbf26ccc81"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:52.000000Z"/>
+<entry
+   name="com_facebook_button_check_on.png"
+   checksum="3c15a7fe567cae8ec80f3c11f5f45cac"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:48.000000Z"/>
+<entry
+   name="com_facebook_button_grey_focused.9.png"
+   checksum="a91d6b10e1c07425dfa60aee09c643ea"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:54.000000Z"/>
+<entry
+   name="com_facebook_button_grey_normal.9.png"
+   checksum="d944435a16fc2f0116a0292e84b49363"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:55.000000Z"/>
+<entry
+   name="com_facebook_button_grey_pressed.9.png"
+   checksum="e2a4fa8fc50f09612e0dbda1dbcfc80e"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+<entry
+   name="com_facebook_close.png"
+   checksum="c157c22f608bbed4a44f293a04e6ac87"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:51.000000Z"/>
+<entry
+   name="com_facebook_icon.png"
+   checksum="71bf13a3c174fc1c93300fd13604c737"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:53.000000Z"/>
+<entry
+   name="com_facebook_list_divider.9.png"
+   checksum="d81ed7c49fae605a33caaaf664ae2f2d"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:52.000000Z"/>
+<entry
+   name="com_facebook_list_section_header_background.9.png"
+   checksum="8df086d0dc8eb8d7900586f9c158e219"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:53.000000Z"/>
+<entry
+   name="com_facebook_loginbutton_blue.xml"
+   checksum="d30b52ee40742c7a4bc40420d529c58e"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_loginbutton_blue_focused.png"
+   checksum="c5941f099ad70350111f75e148bd08bb"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:55.000000Z"/>
+<entry
+   name="com_facebook_loginbutton_blue_normal.png"
+   checksum="2bf0e0c6828e1eb769e8a513654eff8a"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:53.000000Z"/>
+<entry
+   name="com_facebook_loginbutton_blue_pressed.png"
+   checksum="c5941f099ad70350111f75e148bd08bb"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:52.000000Z"/>
+<entry
+   name="com_facebook_loginbutton_silver.xml"
+   checksum="b30ea02d4a758fb751420f864a3f9875"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_logo.png"
+   checksum="3686d4b8fa270c298a4208382a257b83"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:53.000000Z"/>
+<entry
+   name="com_facebook_picker_item_background.xml"
+   checksum="12212626f87d64e8be04b08789804af2"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_list_focused.9.png"
+   checksum="aea6f6c4035408228f6f5e872b406663"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+<entry
+   name="com_facebook_picker_list_longpressed.9.png"
+   checksum="f526e00c8ff0404f13f1104b1ee113b2"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:49.000000Z"/>
+<entry
+   name="com_facebook_picker_list_pressed.9.png"
+   checksum="35a418e973af255821221062fedd1831"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:56.000000Z"/>
+<entry
+   name="com_facebook_picker_list_selector.xml"
+   checksum="8ab53f187967859be09f00df62e3f008"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_list_selector_background_transition.xml"
+   checksum="33578bd2ccbffd907aaff20879525b1a"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_list_selector_disabled.9.png"
+   checksum="ac4c566093b97eab0e8243cb229fc3b9"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:51.000000Z"/>
+<entry
+   name="com_facebook_picker_top_button.xml"
+   checksum="bc5d56ce6654f6855bbb502d74a8aab0"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_place_default_icon.png"
+   checksum="32049632e5a82b32737bd4e7c64845f1"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:51.000000Z"/>
+<entry
+   name="com_facebook_profile_default_icon.png"
+   checksum="a2727c7f46c8a476cb8db553a0d91c94"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+<entry
+   name="com_facebook_profile_picture_blank_portrait.png"
+   checksum="f038aa6ca47b7f4482d7698a0956ed05"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+<entry
+   name="com_facebook_profile_picture_blank_square.png"
+   checksum="7cee4a4ff3425c827e20837b98576013"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:51.000000Z"/>
+<entry
+   name="com_facebook_top_background.xml"
+   checksum="79d5bda9e590078aed2bd82ebcc5174d"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_top_button.xml"
+   checksum="58bcab9a6ea990f8116ae4cf37860a27"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_usersettingsfragment_background_gradient.xml"
+   checksum="1a3152603f439874c80fa03d37703b13"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="courier_bg.xml"
+   checksum="25f7b8af411caaf8d30e82783b9da13a"
+   last-author="azim"
+   text-time="2015-10-29T13:22:06.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="courier_text_color.xml"
+   checksum="822f7fddfba4fd72cc6c775a6d5ad7b6"
+   last-author="azim"
+   text-time="2015-10-29T12:17:48.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="custom_progressbar.xml"
+   checksum="98be50c9381ba19a020d826ee283d278"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="custom_radio.xml"
+   checksum="0ee01c4d20713c7f75a113de79d1c236"
+   last-author="azim"
+   text-time="2015-11-30T10:28:27.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="dialogbg.png"
+   checksum="68ba33e289029b0fb5fab2778266c6f0"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:54.000000Z"/>
+<entry
+   name="edittxtborder.xml"
+   revision="6"
+   checksum="801686f08a15851b7634e380a6d5d053"
+   last-author="azim"
+   text-time="2016-01-15T07:30:37.000000Z"
+   committed-rev="6"
+   kind="file"
+   committed-date="2016-01-15T13:32:21.408000Z"/>
+<entry
+   name="home_bg.xml"
+   checksum="1e858b8f4c2dd16f99a751da10bac054"
+   last-author="azim"
+   text-time="2015-10-29T13:00:46.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="home_button_not_selected.xml"
+   checksum="3705e56169fe7b98f33351cf9b92d332"
+   last-author="azim"
+   text-time="2015-10-29T13:20:42.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="home_button_selected.xml"
+   checksum="0744a976576c20502bb8f9c437502f20"
+   last-author="azim"
+   text-time="2015-10-29T13:20:48.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="image_round.xml"
+   checksum="baf5ad5a9fa5cee989d0dee39e50e3c3"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="karma_sel_01.png"
+   checksum="00c4922bec70c5057bb90d33b3513d9d"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:55.000000Z"/>
+<entry
+   name="level_o1.png"
+   checksum="9a926579cb77f839519a9006ecade990"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+<entry
+   name="light_blue_bar.xml"
+   checksum="e8f54853614269cce9f52aee3243ef0a"
+   last-author="azim"
+   text-time="2015-11-03T12:11:35.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="link_text_selector.xml"
+   checksum="5dc93d2e8de0fdf7397335728642e8ef"
+   last-author="azim"
+   text-time="2015-10-27T07:29:33.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="marker_bleow_corner.png"
+   checksum="1b59a2312a72236e79fa0756ad7a1964"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:54.000000Z"/>
+<entry
+   name="marker_window.png"
+   checksum="74df85881b6d24e0f57f0286c49d770f"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:49.000000Z"/>
+<entry
+   name="popup_window_border.xml"
+   checksum="be7cedbc1bda0bce284e872d855b4ec7"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="providservice_new.jpg"
+   checksum="9cf70c5ebb86cb68d8908a6990dd4f32"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+<entry
+   name="radio_checked.xml"
+   checksum="6842cc83c110b57ba01699d011597418"
+   last-author="azim"
+   text-time="2015-11-02T09:27:11.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="radio_unchecked.xml"
+   checksum="b9fcebcf6aaacb5dceb895f7500612ee"
+   last-author="azim"
+   text-time="2015-11-02T09:27:11.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="rectangle.xml"
+   checksum="2189b727c7624c4262a2d0117e3d9b58"
+   last-author="azim"
+   text-time="2015-10-26T11:40:44.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="requestservice_new.jpg"
+   checksum="d6507fa73141af26955e75d9742b67f4"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:50.000000Z"/>
+<entry
+   name="round_button.xml"
+   checksum="877c7a385c70d6319bd3660fc14ab8bf"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="round_gofer22.png"
+   checksum="0a318db0c5e8610f29861ab8d9877894"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:49.000000Z"/>
+<entry
+   name="rounded_edittext.xml"
+   checksum="2c9dcfca86eab8aa1ea8170e8b510e10"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="segment_bg.xml"
+   checksum="fcb409fdca6ae6f736685d18e54a1700"
+   last-author="azim"
+   text-time="2015-10-29T13:20:59.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="setting_new.jpg"
+   checksum="cae28736de8cac5026d9e817c32de2a3"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:54.000000Z"/>
+<entry
+   name="toggle_button_left.png"
+   checksum="4d91757c4b4d6d07f6091f3412bf314d"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:48.000000Z"/>
+<entry
+   name="toggle_button_right.png"
+   checksum="46fdff369ddd025b69a4d81f7fa8a16c"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"
+   prop-time="2016-01-11T07:08:51.000000Z"/>
+</wc-entries>

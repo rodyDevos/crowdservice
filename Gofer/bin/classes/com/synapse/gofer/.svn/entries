@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/gofer"
+   uuid="43ff5430-f338-4548-9cde-d8d8bb057534"
+   committed-rev="5"
+   kind="dir"
+   committed-date="2016-01-13T13:24:35.285376Z"/>
+<entry
+   name="ActivityForMarkerClick.java"
+   checksum="717b504b4b5a240558ccce3a465068d8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="AddressSelectionFragment.java"
+   revision="6"
+   checksum="636911990c58ab26a99fa12fb9690434"
+   last-author="azim"
+   committed-rev="6"
+   text-time="2016-01-15T07:49:17.000000Z"
+   kind="file"
+   committed-date="2016-01-15T13:32:21.408000Z"/>
+<entry
+   name="AlertDialogFragment.java"
+   checksum="358ebc099b45b9362c13321b7783e652"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:11:58.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="AlertDialogManager.java"
+   checksum="430f4074764b39d89ab62d48cc108936"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="BankDetailsActivity.java"
+   checksum="a09fee1b528c568fa90146c85db9abd6"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="CategoryFragment.java"
+   checksum="dc386cb598704d121577c6275d5dbdde"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:12:32.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="CommentsAddFragment.java"
+   revision="7"
+   checksum="348ed0db429f362eec7c448a569913df"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T11:06:08.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="CommonUtilities.java"
+   checksum="ec0ab2f7d464a4a55d31bf7abf69a787"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ConnectionDetector.java"
+   checksum="b620c168e33a5037f0130f24169f4e59"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ContactActivity.java"
+   revision="6"
+   checksum="0f8fe460a437144fcf338c4d23505872"
+   last-author="azim"
+   committed-rev="6"
+   text-time="2016-01-15T11:40:10.000000Z"
+   kind="file"
+   committed-date="2016-01-15T13:32:21.408000Z"/>
+<entry
+   name="CourierListFragment.java"
+   checksum="2817de91d3c7bf24b63df0c1eae72ab7"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:14:00.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="CustomerDetailFragment.java"
+   checksum="e2504b85f5cd541f2e03a31418d242ec"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:15:06.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="DisputeActivity.java"
+   checksum="76ac858f036c9bf6bf90a6201099fbc7"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-02T05:23:06.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="EditUserProfile.java"
+   checksum="bf487c9df6fc39c5f5c66389d4a7634e"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:16:39.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="EndAddressSelectionFragment.java"
+   revision="7"
+   checksum="8bcae1f9d44b351af44dfefc862d1f30"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T10:22:50.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="FindGoferActivity.java"
+   revision="7"
+   checksum="23d5254e9607da2bcae53f64d7f89984"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T12:26:29.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="GCMIntentService.java"
+   revision="7"
+   checksum="c94262968766bdc13c2e73d0fba3bdf7"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T08:33:51.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="HomeActivity.java"
+   checksum="782be532cd0abcfccf1aed012604b9f7"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ImageActionActivity.java"
+   checksum="faf8165dde40694ad450bb8a240bc108"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobAndCustomerDetailBaseFragment.java"
+   revision="7"
+   checksum="11f56a6536cf0d8e115e53962b070546"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T11:18:26.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="JobAndCustomerDetailFromMarkerClick.java"
+   checksum="7482d9b6535e544902edfb43945cb82a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:18:47.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobDetailFragment.java"
+   checksum="d2f99789d2c451eba7579b3546053378"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:19:53.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobImageActivity.java"
+   revision="7"
+   checksum="79b6c8e9a8be55d78f941784d1b4866e"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T10:52:50.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="JobsListingFragment.java"
+   checksum="15393fa388cc1a11d5d51f8e53032b56"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:22:13.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="LoginActivity.java"
+   checksum="98b7340b00ff90462b2e283b72a4462b"
+   last-author="azim"
+   committed-rev="4"
+   text-time="2016-01-11T11:44:35.000000Z"
+   kind="file"
+   committed-date="2016-01-11T13:22:45.140000Z"/>
+<entry
+   name="MapActivity.java"
+   revision="7"
+   checksum="e01ce1fa37dcb41fda31bbc77eaaa298"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T11:20:32.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="MapProfile.java"
+   checksum="3bea36ba319eb3430e2e3f66c21b3872"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2016-01-06T09:23:15.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="PayPalDetailsActivity.java"
+   checksum="69ed69fae8c8f6ab16dba417059f2c95"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="PaypalWebviewAcivity.java"
+   checksum="079a00c3f7474dcf2d8987f892fd2a93"
+   last-author="azim"
+   committed-rev="5"
+   text-time="2016-01-12T05:56:06.000000Z"
+   kind="file"
+   committed-date="2016-01-13T13:24:35.285000Z"/>
+<entry
+   name="Popup_window.java"
+   checksum="86452ef1313caaf09546c0401c4ce987"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="PriceFragment.java"
+   checksum="23495c824de76239d45688e7e0bd624b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:27:36.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfileActivity.java"
+   checksum="af9f76f5be2f447870c547e1eb23f9e2"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2016-01-06T10:38:14.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfileJobsFragment.java"
+   checksum="5b5849afedb3a9f2224d66df8f70cf3d"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:30:37.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfilePersonalFragment.java"
+   checksum="5d7a2f6aa9557af257269de2253e0114"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:32:09.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfilePhotoActivity.java"
+   checksum="148609b818547c7fc32b56536157b1e8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-03T10:59:08.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfilePublicFragment.java"
+   checksum="5a4271c64853542a5be74979200b2239"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:32:49.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="RateProviderActivity.java"
+   checksum="74e09fa4bb94370596394293b76c7e1a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-01T05:28:21.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ReviewFragment.java"
+   revision="7"
+   checksum="0124001e9efa0bf701212a40bdad21fe"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T10:58:40.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="SendMessageActivity.java"
+   checksum="d51209b5ddaff691f15856b175b7c024"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-30T05:19:15.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ServerUtilities.java"
+   checksum="90378ed1018039f4baa2eb85da942f72"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SettingsActivity.java"
+   revision="7"
+   checksum="bd9ad5e003314960a97ab27160ce8efd"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T12:27:24.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="SignupActivity.java"
+   checksum="e37f16c0ec8e04080ad01ec34982a59f"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-21T11:11:43.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SinupOptionActivity.java"
+   checksum="bcc60081adee072947548cfcf8b28ade"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-10-26T12:55:26.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SplashActivity.java"
+   checksum="691ced47f987bd87f504444b350388d0"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:33:53.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="StripeRegistrationActivity.java"
+   checksum="7bd3599033cd29c5118b58f8272116e4"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="TipForTheDay.java"
+   checksum="7f6f92463dc4f88710a48bbdda3b7610"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="TutorialActivity.java"
+   checksum="799001e2a481cca7cee25f9b7fd28b73"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ViewBidUserfragment.java"
+   revision="6"
+   checksum="4054e81b7aef04fa418e52f4bb4014ba"
+   last-author="azim"
+   committed-rev="6"
+   text-time="2016-01-15T13:09:04.000000Z"
+   kind="file"
+   committed-date="2016-01-15T13:32:21.408000Z"/>
+<entry
+   name="ViewCustomerJobFragment.java"
+   checksum="da5b67c1bb75886b67ab8c13c306f3b8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:36:59.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ViewJobsActivity.java"
+   revision="7"
+   checksum="483f0e4390923e77d649cd841740010c"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T12:28:11.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="WakeLocker.java"
+   checksum="cbe1b4d415fb4bb54bf251474aba63ef"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="adapter"
+   kind="dir"/>
+<entry
+   name="control"
+   kind="dir"/>
+<entry
+   name="db"
+   kind="dir"/>
+<entry
+   name="http"
+   kind="dir"/>
+<entry
+   name="jobandcourier"
+   kind="dir"/>
+<entry
+   name="karmaquestion.java"
+   checksum="fa3f37690042da903683c5e848d0b5f4"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-01T06:39:49.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="model"
+   kind="dir"/>
+<entry
+   name="parser"
+   kind="dir"/>
+<entry
+   name="paypal"
+   kind="dir"/>
+<entry
+   name="service"
+   kind="dir"/>
+<entry
+   name="swipetodelete"
+   kind="dir"/>
+<entry
+   name="util"
+   kind="dir"/>
+<entry
+   name="widget"
+   kind="dir"/>
+</wc-entries>

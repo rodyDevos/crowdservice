@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/gofer/rating"
+   uuid="43ff5430-f338-4548-9cde-d8d8bb057534"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2016-01-11T13:22:45.140275Z"/>
+<entry
+   name="RatingCustomerActivity.java"
+   checksum="282252c456a3feaa261e7a1fcd90121d"
+   last-author="azim"
+   committed-rev="4"
+   text-time="2016-01-11T12:09:31.000000Z"
+   kind="file"
+   committed-date="2016-01-11T13:22:45.140000Z"/>
+<entry
+   name="RatingProviderActivity.java"
+   checksum="5d8c648f65f9a8b6b563202c2afc558c"
+   last-author="azim"
+   committed-rev="4"
+   text-time="2016-01-11T11:44:35.000000Z"
+   kind="file"
+   committed-date="2016-01-11T13:22:45.140000Z"/>
+<entry
+   name="RatingQuestion.java"
+   checksum="e7dcfae32f0957b586bc364d00ae9388"
+   last-author="azim"
+   text-time="2015-04-22T18:14:38.000000Z"
+   committed-rev="2"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="RatingQuestionsActivity.java"
+   checksum="99087e183077978ff45557efd07e79ce"
+   last-author="azim"
+   text-time="2016-01-11T11:44:35.000000Z"
+   committed-rev="4"
+   kind="file"
+   committed-date="2016-01-11T13:22:45.140000Z"/>
+</wc-entries>

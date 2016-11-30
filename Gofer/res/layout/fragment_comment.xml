@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_white"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:text="Comments/Instruction to Courier"
+                android:textColor="@color/dark_pink"
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/step3x"
+                android:textColor="@android:color/white"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/login_blue_line_bottom_margin"
+            android:paddingLeft="@dimen/login_blue_line_bottom_margin"
+            android:paddingRight="@dimen/login_blue_line_bottom_margin" >
+
+            <EditText
+                android:id="@+id/edtComments"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/category_width"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_progressbar"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Add Comments"
+                android:padding="5dp"
+                android:prompt="@string/spinner_title"
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/login_as_guest_text_size" />
+
+            <ImageView
+                android:id="@+id/btnCamera"
+                android:layout_width="@dimen/login_with_fb_height"
+                android:layout_height="@dimen/login_with_fb_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:src="@drawable/camera" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <com.synapse.gofer.control.RoundedImageView
+                    android:id="@+id/imgPhoto"
+                    android:layout_width="@dimen/login_with_fb_width"
+                    android:layout_height="@dimen/login_with_fb_width"
+                    android:padding="10dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bgwhite"
+                    app:riv_border_width="3dip"
+                    app:riv_corner_radius="20dip"
+                    app:riv_oval="false" />
+
+                <TextView
+                    android:id="@+id/txt_no_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="No\nImage\nAvailable"
+                    android:textSize="@dimen/profile_user_name" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_marginEnd="@dimen/login_blue_line_left_right_margin"
+                    android:layout_marginRight="@dimen/login_blue_line_left_right_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="Previous"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_marginLeft="@dimen/login_blue_line_left_right_margin"
+                    android:layout_marginStart="@dimen/login_blue_line_left_right_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="Next"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

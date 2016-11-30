@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/gofer/parser"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="CardPostParser.java"
+   checksum="4c3870228dc905ebfecc43e90b47d048"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="CategoryPostParser.java"
+   checksum="e3e21fbd21cbe7b5d5040517ea93a415"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-09T10:47:21.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="CourierListParser.java"
+   checksum="1eb4dc15379653e9a986cc59a00b43fb"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-27T07:44:23.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="DataPostParser.java"
+   checksum="5c62479b6a92b8016468e6763cb78fa8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-26T06:23:10.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="FundPostParser.java"
+   checksum="f2081c361ad4fb975ff52e248c881fa4"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-27T07:17:40.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobAcceptParser.java"
+   checksum="0ad641c73b6ed5f6fa3bf6eada2a1360"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-26T06:52:09.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobbidParser.java"
+   checksum="43884d74e199f60bda0ebddfe3fac405"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-26T07:44:59.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobsPostParser.java"
+   checksum="2a4af585ebc020b9c7a3e75a597c12e8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-05T09:58:19.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfileJobParser.java"
+   checksum="9be2cf6f965e334a0778467bf005fcaf"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-04T09:26:17.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfilePostParser.java"
+   checksum="52b75dac37c39394c14f5d7850f99b7f"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="UserDataPostParser.java"
+   checksum="d8110254e2d85861684927ca919542c0"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-04T11:42:14.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+</wc-entries>

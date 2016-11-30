@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@null"
+            android:columnCount="1" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:padding="@dimen/login_blue_line_left_right_margin" >
+
+                <TextView
+                    android:id="@+id/center_line"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/category_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/center_line"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/review_list_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:text="Category Name "
+                    android:textColor="#000000"
+                    android:textSize="@dimen/review_list_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#000000" >
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:padding="@dimen/login_blue_line_left_right_margin" >
+
+                <TextView
+                    android:id="@+id/center_line1"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:text="Job Name"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/review_list_text_size" />
+
+                <TextView
+                    android:id="@+id/job_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/center_line1"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/review_list_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#000000" >
+            </TextView>
+
+            <!-- <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:padding="@dimen/login_blue_line_left_right_margin" >
+
+                <TextView
+                    android:id="@+id/center_line11"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:text="Start Date"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/review_list_text_size" />
+
+                <TextView
+                    android:id="@+id/job_starting_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/center_line11"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/review_list_text_size" />
+            </RelativeLayout> 
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#000000" >
+            </TextView>
+			-->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:padding="@dimen/login_blue_line_left_right_margin" >
+
+                <TextView
+                    android:id="@+id/center_line112"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:text="Date"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/review_list_text_size" />
+
+                <TextView
+                    android:id="@+id/job_end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/center_line112"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/review_list_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#000000" >
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:padding="@dimen/login_blue_line_left_right_margin" >
+
+                <TextView
+                    android:id="@+id/center_line111"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:text="Start Address"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/review_list_text_size" />
+
+                <TextView
+                    android:id="@+id/job_starting_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/center_line111"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/review_list_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#000000" >
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:padding="@dimen/login_blue_line_left_right_margin" >
+
+                <TextView
+                    android:id="@+id/center_line1113"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:text="End Address"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/review_list_text_size" />
+
+                <TextView
+                    android:id="@+id/job_end_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/center_line1113"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/review_list_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#000000" >
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:padding="@dimen/login_blue_line_left_right_margin" >
+
+                <TextView
+                    android:id="@+id/center_line1114"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:text="Merchandize Price"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/review_list_text_size" />
+
+                <TextView
+                    android:id="@+id/job_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/center_line1114"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/review_list_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#000000" >
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:padding="@dimen/login_blue_line_left_right_margin" >
+
+                <TextView
+                    android:id="@+id/center_line11145"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:text="Comments/Instructions"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/review_list_text_size" />
+
+                <TextView
+                    android:id="@+id/job_comment_instructions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/center_line11145"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/review_list_text_size" />
+            </RelativeLayout>
+        </GridLayout>
+    </ScrollView>
+
+</LinearLayout>

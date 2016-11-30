@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/login_blue_line_left_right_margin" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivMessageIcon"
+        android:layout_toLeftOf="@+id/row_mail_next"
+        android:layout_toStartOf="@+id/row_mail_next"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout 
+            android:layout_width="match_parent"
+    		android:layout_height="wrap_content">
+    		
+            <TextView
+	            android:id="@+id/txtFromUserName"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_toLeftOf="@+id/txtDate"
+	            android:layout_toStartOf="@+id/txtDate"
+	            android:singleLine="true"
+	            android:text=""
+	            android:textColor="@android:color/black"
+	            android:textSize="@dimen/mailbox_title_text_size"
+	            android:textStyle="bold" />
+	
+	        <TextView
+	            android:id="@+id/txtDate"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentEnd="true"
+        		android:layout_alignParentRight="true"
+        		android:singleLine="true"
+        		android:layout_marginRight="5dp"
+	            android:text="Mar 22"
+	            android:textColor="@color/dark_gray"
+	            android:textSize="@dimen/mailbox_subtitle_text_size"
+	            />
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/agreement_text_bottom_padding"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sign_up_text_size" />
+
+</RelativeLayout>

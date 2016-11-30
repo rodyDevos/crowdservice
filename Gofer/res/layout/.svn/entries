@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   uuid="43ff5430-f338-4548-9cde-d8d8bb057534"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/res/layout"
+   committed-rev="4"
+   kind="dir"
+   committed-date="2016-01-11T13:22:45.140275Z"/>
+<entry
+   name="activity_bank_details.xml"
+   checksum="e9fa8fbe15c728ef5e08f8d67d7a1c1d"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_contact.xml"
+   checksum="dd2614e6a02899eac5a47a90dabbb649"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-09T09:28:05.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_edit_user_profile.xml"
+   checksum="aa65acbb26c35850eff988c41b1867a8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-09T09:57:36.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_findgofer.xml"
+   checksum="0ca65a2653632ae4b3977552b48d7104"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-02T10:02:33.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_home.xml"
+   checksum="cec936d08ec20071663ffa639b1d1ee2"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_image_action.xml"
+   checksum="962f524b06b080295db86f33e574ad4a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_job_image.xml"
+   revision="7"
+   checksum="ab9caabfab72a79985632f9b195993e7"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T08:38:20.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="activity_login.xml"
+   checksum="a6872706af9233f3fbf5f4dd5963ee8e"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-10-27T13:00:16.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_map.xml"
+   checksum="e2a5b1a357e06f55e4fd2f9b93f887d8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-03T11:32:43.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_pay_pal_details.xml"
+   checksum="b9d4a34528366d6ae4ce4cd33a3c80d8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-10-30T12:20:19.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_popup_window.xml"
+   checksum="64d09e215e5826c0fc6dbd07f12b0b2f"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_profile.xml"
+   checksum="b17781bcb7d00fc52b303e9b8dc7f955"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-03T11:00:07.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_profilepoto.xml"
+   checksum="51ee676cffe4768666d502c4cc61c72b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-02T11:47:05.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_settings.xml"
+   checksum="bdd80ab0c352fbcf31a63736f37e291b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-23T10:59:18.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_signup.xml"
+   checksum="8416bb6c3535a9e5ca5a444ddedd4dbd"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_signup_option.xml"
+   checksum="3349c27e67fc5026546a6109c9b0a984"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-10-26T13:23:31.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_signup_register.xml"
+   checksum="80d54ff4a179949cfc59568b165d5cb9"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-21T11:14:22.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_splash.xml"
+   checksum="4f9ef446cf49e2762f764549e4cf131b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_stripe_registration.xml"
+   checksum="8cab2ee473fe04cc5e5aa2fd649a0e06"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_tutorial.xml"
+   checksum="168f87fdcaf91dc34f80ecda49bf2447"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="activity_viewjobs.xml"
+   checksum="7a65c04e30383a08f57728acb4cb1a9e"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-17T09:43:57.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_button_check.xml"
+   checksum="7450aaa2185a3b0e64927a065c7b9592"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_friendpickerfragment.xml"
+   checksum="e991f736d830a9ac64555c6838077de7"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_login_activity_layout.xml"
+   checksum="d673ae89900294f4d35bd1fbab304ee2"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_loginbutton_blue.xml"
+   checksum="d30b52ee40742c7a4bc40420d529c58e"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_loginbutton_silver.xml"
+   checksum="b30ea02d4a758fb751420f864a3f9875"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_activity_circle_row.xml"
+   checksum="9aa8c5f9e2b09bb5bd704581e344fe6a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_checkbox.xml"
+   checksum="d22a83ea5d02086442131aaa20ec452a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_image.xml"
+   checksum="1649ab4bbe875f22692fc43f839230a0"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_item_background.xml"
+   checksum="12212626f87d64e8be04b08789804af2"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_list_row.xml"
+   checksum="edba7284ff0b48900bde986eb01e995a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_list_section_header.xml"
+   checksum="e693a8acffefffd70bed623219bf3512"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_list_selector.xml"
+   checksum="8ab53f187967859be09f00df62e3f008"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_list_selector_background_transition.xml"
+   checksum="33578bd2ccbffd907aaff20879525b1a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_search_box.xml"
+   checksum="10447e32e9c5fe63e905734112dea811"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_title_bar.xml"
+   checksum="e9f4c37ed498fde13987765fd9eb2fb9"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-27T10:08:15.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_title_bar_stub.xml"
+   checksum="b5a107a64649622c1b3ab061e9b7ecb8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_picker_top_button.xml"
+   checksum="bc5d56ce6654f6855bbb502d74a8aab0"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_placepickerfragment.xml"
+   checksum="abd26dd2d69f446cb6c1c55fc434eb0b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_placepickerfragment_list_row.xml"
+   checksum="76b97fef87f69567f5164ca2ea20aa78"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_top_background.xml"
+   checksum="79d5bda9e590078aed2bd82ebcc5174d"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_top_button.xml"
+   checksum="58bcab9a6ea990f8116ae4cf37860a27"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_usersettingsfragment.xml"
+   checksum="c129bdd20fc6ef4db6ecc2adc4a22289"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="com_facebook_usersettingsfragment_background_gradient.xml"
+   checksum="1a3152603f439874c80fa03d37703b13"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="contact_detail.xml"
+   checksum="f0d1f84cb8f4a7bb6b1123ab83823ef3"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-27T06:33:11.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="contatct_edittext_activity.xml"
+   checksum="68ba5bd11e4798b78b6b148642e0894b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="custom_address_alert_dialog.xml"
+   checksum="872e0290b8f9f09eb9a21e6c4b57218e"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-23T05:31:37.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="custom_rating_bar.xml"
+   checksum="d1643256847cb036c62c5bace13cfbd8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="customalert.xml"
+   checksum="b4ccf87f43012d2086bd1bf822d52591"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-02T05:18:22.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="dailog_gofer_support.xml"
+   checksum="b6340b2cff5f6dd1463794ec46c0b033"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="dialog_findgoger.xml"
+   checksum="4420c4b47acb261f6a65bb9bb98f2aa4"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="dispute_detail.xml"
+   checksum="040ba1744f17038e03c10117304cd5a3"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-24T08:57:01.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_addressselection.xml"
+   checksum="afed8658c8feea28b4947720a159e01f"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-23T08:38:37.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_categoryselection.xml"
+   checksum="b33e7306efb78741d7dad3cc074a1800"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-21T11:20:00.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_comment.xml"
+   checksum="ba97655ba29f9040ec968784927fd482"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-25T12:10:29.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_courier_detail.xml"
+   checksum="7370d6067879473616d0a94c46703375"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_courier_jobs_listing.xml"
+   checksum="f7f77dc209df4a9c43c28b470a17930b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-02T05:32:51.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_courier_list.xml"
+   checksum="55905c089c3047065498afe7846e0453"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_customer_detail.xml"
+   checksum="a3b628f33fa87543db27faed8e26d407"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-19T11:09:22.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_customer_detail_alert_dialog.xml"
+   checksum="72a4f2a9a211739deea14f96bc74f67f"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_endaddress.xml"
+   checksum="df62162ecbd72303717b88e48266b88a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-23T08:38:16.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_job_and_courier_detail_base.xml"
+   checksum="a69d11357e9f0b1ee312965999082b95"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-03T10:50:22.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_job_and_customer_detai_basel.xml"
+   checksum="4512a7cb485019d375422bdbc2edce35"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-24T08:16:52.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_job_detail.xml"
+   checksum="76ccd1d51d67dfea83e9da423efdd8b3"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-01T13:01:17.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_jobs.xml"
+   checksum="f7deb4c82a707b56423eebcb042309a2"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_jobs_listing.xml"
+   checksum="1146f63ff3a204fa3a4cc3762ffca4b4"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-04T06:34:33.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_personalprofile.xml"
+   checksum="4b82c020f773800ab8cad3e790f78543"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_priceselection.xml"
+   checksum="2bf4c6eb736cdb52d71a5a16df8a069d"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="fragment_review.xml"
+   revision="7"
+   checksum="e53dec9bdf5ef1fe5a2f56a25854a19f"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T09:54:13.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="fragment_view_customer_jobs.xml"
+   checksum="69e4c0d6e27822630474d14fb9819eb0"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-01T11:41:54.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="jobs_listview.xml"
+   checksum="8f7bfa393410ab2e390950b5c76dabe8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="karmalayout.xml"
+   checksum="c9a83f6d91130f49f0465a50bbcce86b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-30T09:54:53.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="map_profile.xml"
+   checksum="5dcea095e2a37e7c8e2a6ae2cdc810e8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-10-28T09:53:50.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="markerinfo_window.xml"
+   checksum="8a07fd6b1cb1da059afe5f3ea956610d"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="popup_address.xml"
+   checksum="dfb48c75f559fa5fabb47acb3c94e040"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="popup_marker_option.xml"
+   checksum="a74712f1b548e3953e8a9ee1f6c3860e"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="popup_paypal_detials.xml"
+   checksum="886fe4fea462019cbb7fab73607b03b3"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="popup_window2.xml"
+   checksum="ccfcce8bdba6c79b95bdb992abbe7676"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="profile_job_listing.xml"
+   checksum="6bc3dbcc4c62ea51542cd0c82ce6b5d2"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-04T11:44:19.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ratecustomerlayout.xml"
+   checksum="f9ed021f8eb20a6b40d37b84f1ab23b8"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-30T10:30:16.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="rating_activity.xml"
+   revision="7"
+   checksum="500f65db3e8cb40689e64ff4c804e4df"
+   last-author="azim"
+   committed-rev="7"
+   text-time="2016-01-16T11:20:55.000000Z"
+   kind="file"
+   committed-date="2016-01-16T12:34:54.462000Z"/>
+<entry
+   name="rating_activity_1.xml"
+   checksum="5c7f05b88939e43b9b8f92bd2e44ea4c"
+   last-author="azim"
+   committed-rev="4"
+   text-time="2016-01-11T12:13:32.000000Z"
+   kind="file"
+   committed-date="2016-01-11T13:22:45.140000Z"/>
+<entry
+   name="rating_questions_activity.xml"
+   checksum="fe4689991baef38a9e981f5836071213"
+   last-author="azim"
+   committed-rev="4"
+   text-time="2016-01-11T12:13:49.000000Z"
+   kind="file"
+   committed-date="2016-01-11T13:22:45.140000Z"/>
+<entry
+   name="row_detailpager.xml"
+   checksum="dc0f5bc529040d1303b706bf6985639f"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="row_job_listing.xml"
+   checksum="b7f3b3dd844ff09c1a0f0e8f9ccdd2ac"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-10-30T14:05:20.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="row_spinner.xml"
+   checksum="524e498c2260b95adf96147433662472"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="row_viewbid_user.xml"
+   checksum="a09ac231e035dd182b7ed577b764562b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-16T07:39:07.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="sendmessagelayout.xml"
+   checksum="c072115956eaa151e5935dc2d8b159c6"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-30T05:34:43.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="services_list_adapter.xml"
+   checksum="2490875946d7c8f42ead4afd5a745a96"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="user_registration.xml"
+   checksum="1e60d2c83db2dfed0a3e261f9a637b8b"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="webviewlayout.xml"
+   checksum="8e3960fd8f5459856c82cff18baff825"
+   last-author="azim"
+   committed-rev="4"
+   text-time="2016-01-11T13:18:01.000000Z"
+   kind="file"
+   committed-date="2016-01-11T13:22:45.140000Z"/>
+</wc-entries>

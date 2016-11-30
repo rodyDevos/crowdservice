@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   name=""
+   revision="5"
+   last-author="azim"
+   uuid="43ff5430-f338-4548-9cde-d8d8bb057534"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/res"
+   committed-rev="5"
+   kind="dir"
+   committed-date="2016-01-13T13:24:35.285376Z"/>
+<entry
+   name="anim"
+   kind="dir"/>
+<entry
+   name="color"
+   kind="dir"/>
+<entry
+   name="drawable"
+   kind="dir"/>
+<entry
+   name="drawable-hdpi"
+   kind="dir"/>
+<entry
+   name="drawable-large-mdpi"
+   kind="dir"/>
+<entry
+   name="drawable-ldpi"
+   kind="dir"/>
+<entry
+   name="drawable-mdpi"
+   kind="dir"/>
+<entry
+   name="drawable-xhdpi"
+   kind="dir"/>
+<entry
+   name="drawable-xlarge-mdpi"
+   kind="dir"/>
+<entry
+   name="drawable-xxhdpi"
+   kind="dir"/>
+<entry
+   name="layout"
+   kind="dir"/>
+<entry
+   name="menu"
+   kind="dir"/>
+<entry
+   name="values"
+   kind="dir"/>
+<entry
+   name="values-hdpi"
+   kind="dir"/>
+<entry
+   name="values-sw600dp"
+   kind="dir"/>
+<entry
+   name="values-sw720dp"
+   kind="dir"/>
+<entry
+   name="values-sw720dp-land"
+   kind="dir"/>
+<entry
+   name="values-v11"
+   kind="dir"/>
+<entry
+   name="values-v14"
+   kind="dir"/>
+<entry
+   name="values-w820dp"
+   kind="dir"/>
+<entry
+   name="values-xhdpi"
+   kind="dir"/>
+<entry
+   name="values-xxhdpi"
+   kind="dir"/>
+</wc-entries>

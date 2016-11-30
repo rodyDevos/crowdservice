@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/header"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:text="Done"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="Deleffddte"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" 
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="10dp"
+         />
+
+        <TextView
+            android:id="@+id/btndelete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:text="Delete"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" 
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="10dp"
+         />
+    </RelativeLayout>
+    
+    
+    <ImageView 
+        android:id="@+id/job_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:visibility="visible"
+        android:scaleType="centerCrop"
+        android:layout_margin="2dp"
+        />
+
+    
+
+</LinearLayout>

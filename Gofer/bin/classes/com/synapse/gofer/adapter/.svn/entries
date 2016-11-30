@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="http://192.168.200.87:8181/svn/CrowdService_Android"
+   revision="5"
+   last-author="azim"
+   url="http://192.168.200.87:8181/svn/CrowdService_Android/Gofer/src/com/synapse/gofer/adapter"
+   committed-rev="2"
+   kind="dir"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="CommissionedJobListingAdapter.java"
+   checksum="8d76b7f8f8f59f7661afadba422e0be6"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-10T09:40:17.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="DescriptionPagerAdapter.java"
+   checksum="b7805301cf8c267287c2db51fdecacad"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="JobListingAdapter.java"
+   checksum="442cbcd18c4eb041ef943ae030829339"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-10-30T13:30:26.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ProfileJobAdapter.java"
+   checksum="731b34c86397f951543b911cc34eb96a"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-11-17T07:08:33.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ServicesAdapter.java"
+   checksum="cb7b823a239b40de4ce2cc031e3043db"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="SpinnerCustomAdapter.java"
+   checksum="83ed206edb76fb03465878a5cf7ca1dc"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-04-22T18:14:38.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ViewBidUserAdapter.java"
+   checksum="dcf0e8ec18f01d5354b05b543b587d83"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-07T10:37:53.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+<entry
+   name="ViewCustomerJobListingAdapter.java"
+   checksum="3607273fcef6182630530659c5d08406"
+   last-author="azim"
+   committed-rev="2"
+   text-time="2015-12-02T11:03:14.000000Z"
+   kind="file"
+   committed-date="2016-01-11T07:09:49.514000Z"/>
+</wc-entries>

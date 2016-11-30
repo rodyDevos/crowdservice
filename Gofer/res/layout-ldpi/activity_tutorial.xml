@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+     >
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <Button
+            android:id="@+id/btnDone"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_blank2x"
+            android:text="Done"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+</RelativeLayout>

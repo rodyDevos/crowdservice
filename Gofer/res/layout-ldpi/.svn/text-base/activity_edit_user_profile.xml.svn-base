@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    android:gravity="bottom"
+    tools:context="com.synapse.gofer.EditUserProfile" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_top_bar"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/edit_profile"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sign_up_text_size" />
+
+        <TextView
+            android:id="@+id/txtProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/left"
+            android:drawableStart="@drawable/left"
+            android:gravity="center"
+            android:text="@string/profile"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sign_up_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/headerLayout"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/login_blue_line_left_right_margin"
+        android:fadingEdge="@null"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/login_blue_line_left_right_margin"
+        android:paddingRight="@dimen/login_blue_line_left_right_margin"
+        android:paddingTop="@dimen/login_blue_line_left_right_margin" >
+
+        <LinearLayout
+            android:id="@+id/scroll_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.synapse.gofer.control.CircleImageView
+                    android:id="@+id/imgView"
+                    android:layout_width="@dimen/edit_profile_image_width_size"
+                    android:layout_height="@dimen/edit_profile_image_width_size"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/txtEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@drawable/edit2x"
+                    android:drawableStart="@drawable/edit2x"
+                    android:paddingEnd="0dp"
+                    android:paddingLeft="@dimen/login_blue_line_left_right_margin"
+                    android:paddingRight="0dp"
+                    android:paddingStart="@dimen/login_blue_line_left_right_margin"
+                    android:text="@string/edit_prof_picture"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end" >
+
+                    <TextView
+                        android:id="@+id/txtshield"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/shieldx"
+                        android:gravity="center_horizontal"
+                        android:text="@string/background_check_request"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/login_as_guest_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name"
+                android:textColor="#000000"
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textSize="@dimen/agreement_text_text_size" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:text="@string/last_name"
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtLastName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:text="@string/user_name"
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName|none"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <TextView
+                android:id="@+id/txtAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:text="About (Max 200 Characters)"
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtAbout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_profile_image_width_size"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:inputType="textLongMessage"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <TextView
+                android:id="@+id/txtTrueAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:text="True Address : "
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtAddress1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="Address 1 :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <EditText
+                android:id="@+id/edtAddress2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="Address 2 :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <EditText
+                android:id="@+id/edtCity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="City :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <EditText
+                android:id="@+id/edtState"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="State :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <EditText
+                android:id="@+id/edtZip"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="Zip :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <TextView
+                android:id="@+id/txtAppAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:text="Approximate Address : "
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtAppAddress1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="Address 1 :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <EditText
+                android:id="@+id/edtAppAddress2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="Address 2 :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <EditText
+                android:id="@+id/edtAppCity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="City :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <EditText
+                android:id="@+id/edtAppState"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="State :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <EditText
+                android:id="@+id/edtAppZip"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_rating_star_height_width"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/input12x"
+                android:ems="10"
+                android:hint="Zip :"
+                android:paddingLeft="5dp"
+                android:textColor="@color/app_text_color2"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <TextView
+                android:id="@+id/txtChangePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:text="CHANGE PASSWORD : "
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/lyChangePass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:weightSum="2" >
+
+                <EditText
+                    android:id="@+id/edtChangePass"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/profile_rating_star_height_width"
+                    android:layout_marginEnd="@dimen/login_blue_line_left_right_margin"
+                    android:layout_marginRight="@dimen/login_blue_line_left_right_margin"
+                    android:layout_weight="1.60"
+                    android:background="@drawable/input12x"
+                    android:ems="10"
+                    android:hint="Change Password : "
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/app_text_color2"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/agreement_text_text_size" />
+
+                <Button
+                    android:id="@+id/btnChangePass"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/profile_rating_star_height_width"
+                    android:layout_weight="0.40"
+                    android:background="@drawable/blank_btn2x"
+                    android:gravity="center"
+                    android:text="Change"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtFinancialDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:text="PAYMENT DETAILS : "
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtBankDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="PayPal Information : "
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/agreement_text_text_size" />
+
+            <LinearLayout
+                android:id="@+id/lyBankDetials"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtBankDetail"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <EditText
+                    android:id="@+id/edtBankDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/profile_rating_star_height_width"
+                    android:layout_marginRight="@dimen/login_blue_line_left_right_margin"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.60"
+                    android:background="@drawable/input12x"
+                    android:editable="false"
+                    android:hint=""
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/app_text_color2" />
+
+                <Button
+                    android:id="@+id/btnBankDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/profile_rating_star_height_width"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.40"
+                    android:background="@drawable/blank_btn2x"
+                    android:gravity="center"
+                    android:text="Change"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="PREFERED SERVICES(Check # that apply)"
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/categrory_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="@dimen/login_blue_line_left_right_margin"
+                android:soundEffectsEnabled="true"
+                android:textOff="Courier"
+                android:textOn="Home"
+                android:textSize="@dimen/login_as_guest_text_size"
+                android:visibility="gone" />
+
+            <com.synapse.gofer.control.SegmentedGroup
+                android:id="@+id/segmented2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                segmentedgroup:sc_border_width="1dp"
+                segmentedgroup:sc_checked_text_color="@android:color/white"
+                segmentedgroup:sc_corner_radius="5dp"
+                segmentedgroup:sc_tint_color="@color/category_blue" >
+
+                <RadioButton
+                    android:id="@+id/btnCourier"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Courier"
+                    android:textSize="@dimen/agreement_text_text_size" />
+
+                <RadioButton
+                    android:id="@+id/btnHome"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="@dimen/agreement_text_text_size" />
+            </com.synapse.gofer.control.SegmentedGroup>
+
+            <LinearLayout
+                android:id="@+id/linearserviceList"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/courier_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1" />
+
+                <ListView
+                    android:id="@+id/home_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSaveChanges"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/login_with_fb_height"
+                android:layout_margin="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/blank_btn2x"
+                android:gravity="center"
+                android:text="Save Changes"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/login_as_guest_text_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

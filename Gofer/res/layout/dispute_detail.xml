@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_top_bar"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sign_up_text_size" />
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/left"
+            android:drawableStart="@drawable/left"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sign_up_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/layoutPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtyourname"
+                    android:textSize="@dimen/agreement_text_text_size"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edityourname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittxtborder"
+                    android:hint="@string/txtyourname"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/agreement_text_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtothername"
+                    android:textSize="@dimen/agreement_text_text_size"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editothername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittxtborder"
+                    android:hint="@string/txtothername"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/agreement_text_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtjobdate"
+                    android:textSize="@dimen/agreement_text_text_size"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editjobdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittxtborder"
+                    android:hint="MM/DD/YYYY"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/agreement_text_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtjobname"
+                    android:textSize="@dimen/agreement_text_text_size"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editjobname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittxtborder"
+                    android:hint="@string/txtjobname"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/agreement_text_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtdispute"
+                    android:textSize="@dimen/agreement_text_text_size"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editdiscript"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittxtborder"
+                    android:gravity="top"
+                    android:hint="@string/txtdisputehint"
+                    android:lines="5"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:textSize="@dimen/agreement_text_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <Button
+                    android:id="@+id/btnshow_traffic"
+                    android:layout_width="@dimen/logout_button_width"
+                    android:layout_height="@dimen/login_with_fb_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/login_blue_line_bottom_margin"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="@string/txtsubmit"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

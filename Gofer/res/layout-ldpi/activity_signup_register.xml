@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/sign_up"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sign_up_text_size" />
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/left"
+            android:drawableStart="@drawable/left"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sign_up_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+	    android:focusable="true" 
+	    android:focusableInTouchMode="true"
+	    android:layout_width="0px" 
+	    android:layout_height="0px"/>
+    
+    <ScrollView
+        android:id="@+id/scrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:fadingEdge="@null"
+        android:orientation="vertical"
+        android:background="@drawable/login_bg_new"
+         >
+        
+        <LinearLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+        
+            <ImageButton
+                android:id="@+id/btnFBSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fb_signup" />
+
+            <LinearLayout
+                android:id="@+id/containerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp" >
+
+                <TextView
+                    android:id="@+id/btnEmailSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Or, register with Email:"
+                    android:textColor="@color/bg_color_red"
+                    android:textSize="@dimen/sign_up_text_size"
+                    android:textStyle="bold" />
+
+                <com.synapse.gofer.control.CircleImageView
+                    android:id="@+id/imgPhoto"
+                    android:layout_width="@dimen/register_prof_pic_size"
+                    android:layout_height="@dimen/register_prof_pic_size"
+                    android:layout_gravity="center"
+                    android:textColorHint="@color/hint_color"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_uname"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/userFName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_fname"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/userLName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_lname"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_email_add"
+                    android:inputType="textEmailAddress"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/userPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/enter_pass"
+                    android:inputType="textPassword"
+                    android:maxLength="10"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/userConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/confirm_pass"
+                    android:inputType="textPassword"
+                    android:maxLength="10"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+            </LinearLayout>
+            
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/login_blue_line_bottom_margin"
+                android:layout_marginLeft="@dimen/enter_uname_pwd_left_right_margin"
+                android:layout_marginRight="@dimen/enter_uname_pwd_left_right_margin"
+                android:layout_marginTop="@dimen/login_blue_line_bottom_margin"
+                android:background="@drawable/rectangle"
+                android:text="@string/register_with_email"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sign_up_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

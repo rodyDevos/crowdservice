@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/login_blue_line_left_right_margin" >
+
+    <ImageView
+        android:id="@+id/ivMessageIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+         />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/agreement_text_bottom_padding"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mailbox_subtitle_text_size"
+        android:layout_toRightOf="@+id/ivMessageIcon"
+        android:layout_toEndOf="@+id/ivMessageIcon" />
+
+</RelativeLayout>

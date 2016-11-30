@@ -1,0 +1,236 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical"
+    android:weightSum="160" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:background="@drawable/blue_top_bar"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sign_up_text_size" />
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/left"
+            android:drawableStart="@drawable/left"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sign_up_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="150"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:id="@+id/layoutSettings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/enter_uname_pwd_left_right_margin"
+                android:layout_marginRight="@dimen/enter_uname_pwd_left_right_margin"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btnRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_with_fb_height"
+                    android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="@string/default_screen_radius"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <TextView
+                    android:id="@+id/textRadius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/login_blue_line_bottom_margin"
+                    android:text="@string/decrease_launch_time"
+                    android:textColor="@color/app_label_color"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <Button
+                    android:id="@+id/btnRadiusOfPostedJobs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_with_fb_height"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="@string/set_distance_of_posted_job"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/login_blue_line_bottom_margin"
+                    android:text="@string/reduce_clutter_in_busy_areas"
+                    android:textColor="@color/app_label_color"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <Button
+                    android:id="@+id/btnMapRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_with_fb_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="@string/map_refresh_rate"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <TextView
+                    android:id="@+id/textRefrest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/login_blue_line_bottom_margin"
+                    android:text="@string/fine_tune_for_your_phone"
+                    android:textColor="@color/app_label_color"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <Button
+                    android:id="@+id/btnPofile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_with_fb_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="@string/profile"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <Button
+                    android:id="@+id/btnshow_traffic"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_with_fb_height"
+                    android:layout_marginTop="@dimen/login_blue_line_bottom_margin"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="@string/show_traffic"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <TextView
+                    android:id="@+id/texttraffic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/login_blue_line_bottom_margin"
+                    android:text="@string/useful_for_providers"
+                    android:textColor="@color/app_label_color"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTipofday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/register_edittext_top_margin" >
+
+                <TextView
+                    android:id="@+id/lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/login_blue_line_left_right_margin"
+                    android:layout_marginRight="@dimen/login_blue_line_left_right_margin"
+                    android:gravity="center"
+                    android:text="@string/tip_of_the_day"
+                    android:textColor="@color/app_label_color"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical" >
+
+                    <ToggleButton
+                        android:id="@+id/togleTipofday"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/on"
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/login_blue_line_left_right_margin"
+                android:paddingLeft="@dimen/login_blue_line_left_right_margin"
+                android:paddingRight="@dimen/login_blue_line_left_right_margin"
+                android:paddingStart="@dimen/login_blue_line_left_right_margin" >
+
+                <Button
+                    android:id="@+id/dispute"
+                    android:layout_width="@dimen/logout_button_width"
+                    android:layout_height="@dimen/login_with_fb_height"
+                    android:layout_gravity="start|center_vertical"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="@string/dispute"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/send_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/login_blue_line_left_right_margin"
+                        android:src="@drawable/love_icon"
+                        android:textSize="@dimen/login_as_guest_text_size" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="@dimen/logout_button_width"
+                    android:layout_height="@dimen/login_with_fb_height"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="@string/logout"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

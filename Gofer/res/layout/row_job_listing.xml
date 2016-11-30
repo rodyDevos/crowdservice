@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/light_blue_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/login_blue_line_left_right_margin" >
+
+    <ImageView
+        android:id="@+id/row_job_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/go" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/row_job_next"
+        android:layout_toStartOf="@+id/row_job_next"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/row_job_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sign_up_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/row_job_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/agreement_text_bottom_padding"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sign_up_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

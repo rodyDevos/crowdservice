@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dip"
+    android:background="@drawable/alert_bg"
+    android:orientation="vertical"
+    android:paddingBottom="15dip"
+    android:paddingLeft="0dip"
+    android:paddingRight="0dip"
+    android:paddingTop="0dip" >
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#00000000"
+        android:gravity="center"
+        android:text="Please check your numbers or contact Gofer Support"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold" >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="Contact"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.43"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

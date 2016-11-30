@@ -1,0 +1,266 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        android:orientation="horizontal" >
+
+        <!-- <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/register"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sign_up_text_size" /> -->
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/left"
+            android:drawableStart="@drawable/left"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sign_up_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+	    android:focusable="true" 
+	    android:focusableInTouchMode="true"
+	    android:layout_width="0px" 
+	    android:layout_height="0px"/>
+    
+    <ScrollView
+        android:id="@+id/scrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:fadingEdge="@null"
+        android:orientation="vertical"
+        android:background="@drawable/login_bg_new"
+         >
+        
+        <LinearLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+        
+            <LinearLayout
+                android:id="@+id/containerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp" >
+
+                <TextView
+                    android:id="@+id/lbDescription1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sign_up_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/true_add"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sign_up_text_size"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/trueAddress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_add_1"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/trueAddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_add_2"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/trueAddress3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_city"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/trueAddress4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_state"
+                    android:inputType="textEmailAddress"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/trueAddress5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/enter_zip"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:text="Approximate Address - You may give an Approxiomate Address when publicly listing a job, then provide your true address after you select a bidder. Please give a location near you, so that bidders can see about where you are. E.g., 41st and Vine St, MyCity, State"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sign_up_text_size"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/approxAddress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_add_1"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/approxAddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_add_2"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/approxAddress3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_city"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/approxAddress4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:hint="@string/enter_state"
+                    android:inputType="textEmailAddress"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+
+                <EditText
+                    android:id="@+id/approxAddress5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/register_edittext_top_margin"
+                    android:background="@drawable/rectangle_editview"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/enter_zip"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/sign_up_text_size" />
+            </LinearLayout>
+            
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/login_blue_line_bottom_margin"
+                android:layout_marginLeft="@dimen/enter_uname_pwd_left_right_margin"
+                android:layout_marginRight="@dimen/enter_uname_pwd_left_right_margin"
+                android:layout_marginTop="@dimen/login_blue_line_bottom_margin"
+                android:background="@drawable/rectangle"
+                android:text="@string/submit"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sign_up_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

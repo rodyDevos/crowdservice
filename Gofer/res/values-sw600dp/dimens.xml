@@ -1,0 +1,39 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+
+    <dimen name="login_logo_top_padding">300dp</dimen>
+    <dimen name="login_signup_left_right_padding">75dp</dimen>
+    <dimen name="sign_up_text_size">30sp</dimen>
+    <dimen name="login_blue_line_top_margin">40dp</dimen>
+    <dimen name="login_blue_line_bottom_margin">30dp</dimen>
+    <dimen name="login_blue_line_left_right_margin">20dp</dimen>
+    <dimen name="login_signin_left_right_padding">80dp</dimen>
+    <dimen name="login_as_guest_text_size">28sp</dimen>
+    <dimen name="agreement_text_text_size">25sp</dimen>
+    <dimen name="agreement_text_bottom_padding">5dp</dimen>
+    <dimen name="signin_signup_top_bottom_padding">15dp</dimen>
+    <dimen name="enter_uname_pwd_left_right_margin">40dp</dimen>
+    <dimen name="login_with_fb_width">350dp</dimen>
+    <dimen name="login_with_email_width">300dp</dimen>
+    <dimen name="login_with_fb_height">60dp</dimen>
+    <dimen name="register_edittext_top_margin">10dp</dimen>
+    <dimen name="register_prof_pic_size">200dp</dimen>
+    <dimen name="field_height">60dp</dimen>
+    <dimen name="register_prof_pic_bg_size">250dp</dimen>
+    <dimen name="logout_button_width">180dp</dimen>
+    <dimen name="profile_user_name">32sp</dimen>
+    <dimen name="profile_img_width_height">150dp</dimen>
+    <dimen name="profile_rating_star_height_width">45dp</dimen>
+    <dimen name="profile_page_button_height">90dp</dimen>
+    <dimen name="edit_profile_image_width_size">75dp</dimen>
+    <dimen name="category_width">140dp</dimen>
+    <dimen name="review_list_text_size">18sp</dimen>
+
+    <dimen name="mailbox_title_text_size">25sp</dimen>
+    <dimen name="mailbox_subtitle_text_size">21sp</dimen>
+    
+</resources>

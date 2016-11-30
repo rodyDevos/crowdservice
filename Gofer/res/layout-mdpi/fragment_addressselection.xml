@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_white"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:text="@string/txtwhenstart"
+                android:textColor="@color/dark_pink"
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/step2x"
+                android:textColor="@android:color/white"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/login_blue_line_bottom_margin"
+            android:paddingLeft="@dimen/login_blue_line_bottom_margin"
+            android:paddingRight="@dimen/login_blue_line_bottom_margin" >
+
+            <LinearLayout
+                android:id="@+id/llstartingAddress"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingTop="@dimen/size_padding_10" >
+            
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:paddingTop="5dp"
+	                android:text="@string/txtstartingaddress"
+	                android:textColor="@color/dark_pink"
+	                android:textSize="@dimen/agreement_text_text_size"
+	                 />
+	            
+	            <EditText
+	                android:id="@+id/edtStartingAddress"
+	                android:layout_width="match_parent"
+	                android:layout_height="@dimen/address_field_height"
+	                android:layout_marginTop="5dp"
+	                android:background="@drawable/bg_progressbar"
+	                android:editable="false"
+	                android:ems="10"
+	                android:gravity="top"
+	                android:hint="@string/txttouchhint"
+	                android:padding="5dp"
+	                android:prompt="@string/spinner_title"
+	                android:textColor="@color/hint_color"
+	                android:textColorHint="@color/hint_color"
+	                android:textSize="@dimen/login_as_guest_text_size" />
+	
+	            <LinearLayout
+	                android:id="@+id/llBtnStartingApproxAddr"
+	                android:layout_width="match_parent"
+	                android:layout_height="@dimen/field_height"
+	                android:layout_marginTop="15dp"
+	                android:orientation="horizontal" >
+	
+	                <Button
+	                    android:id="@+id/btnStartingApproxAddr"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_marginEnd="@dimen/login_blue_line_left_right_margin"
+	                    android:layout_marginRight="@dimen/login_blue_line_left_right_margin"
+	                    android:layout_weight="1"
+	                    android:background="@drawable/blank_btn2x"
+	                    android:text="@string/txtapproxaddress"
+	                    android:textColor="@android:color/white"
+	                    android:textSize="@dimen/login_as_guest_text_size" />
+	
+	                <Button
+	                    android:id="@+id/btnStartingTrueAddr"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_marginLeft="@dimen/login_blue_line_left_right_margin"
+	                    android:layout_marginStart="@dimen/login_blue_line_left_right_margin"
+	                    android:layout_weight="1"
+	                    android:background="@drawable/blank_btn2x"
+	                    android:text="@string/txttrueaddress"
+	                    android:textColor="@android:color/white"
+	                    android:textSize="@dimen/login_as_guest_text_size" />
+	            </LinearLayout>
+			</LinearLayout>
+			
+            <LinearLayout
+                android:id="@+id/llendingAddress"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingTop="@dimen/size_padding_10" >
+            
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:paddingTop="5dp"
+	                android:text="@string/txtendingaddress"
+	                android:textColor="@color/dark_pink"
+	                android:textSize="@dimen/agreement_text_text_size"
+	                 />
+	            
+	            <EditText
+	                android:id="@+id/edtEndingAddress"
+	                android:layout_width="match_parent"
+	                android:layout_height="@dimen/address_field_height"
+	                android:layout_marginTop="5dp"
+	                android:background="@drawable/bg_progressbar"
+	                android:editable="false"
+	                android:ems="10"
+	                android:gravity="top"
+	                android:hint="@string/txttouchhint"
+	                android:padding="5dp"
+	                android:prompt="@string/spinner_title"
+	                android:textColor="@color/hint_color"
+	                android:textColorHint="@color/hint_color"
+	                android:textSize="@dimen/login_as_guest_text_size" />
+	
+	            <LinearLayout
+	                android:id="@+id/llBtnEndingApproxAddr"
+	                android:layout_width="match_parent"
+	                android:layout_height="@dimen/field_height"
+	                android:layout_marginTop="15dp"
+	                android:orientation="horizontal" >
+	
+	                <Button
+	                    android:id="@+id/btnEndingApproxAddr"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_marginEnd="@dimen/login_blue_line_left_right_margin"
+	                    android:layout_marginRight="@dimen/login_blue_line_left_right_margin"
+	                    android:layout_weight="1"
+	                    android:background="@drawable/blank_btn2x"
+	                    android:text="@string/txtapproxaddress"
+	                    android:textColor="@android:color/white"
+	                    android:textSize="@dimen/login_as_guest_text_size" />
+	
+	                <Button
+	                    android:id="@+id/btnEndingTrueAddr"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_marginLeft="@dimen/login_blue_line_left_right_margin"
+	                    android:layout_marginStart="@dimen/login_blue_line_left_right_margin"
+	                    android:layout_weight="1"
+	                    android:background="@drawable/blank_btn2x"
+	                    android:text="@string/txttrueaddress"
+	                    android:textColor="@android:color/white"
+	                    android:textSize="@dimen/login_as_guest_text_size" />
+	            </LinearLayout>
+			</LinearLayout>
+            <!-- <Button
+                android:id="@+id/btnNone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/field_height"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/blank_btn2x"
+                android:text="None"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_as_guest_text_size" /> -->
+
+            <Button
+                android:id="@+id/btnCustom"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/blank_btn2x"
+                android:text="Custom Address"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_padding_5"
+                android:layout_marginTop="@dimen/login_blue_line_bottom_margin"
+                android:text="@string/txtwhenstart1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/dark_pink"
+                android:textSize="@dimen/login_as_guest_text_size" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- <Button
+                    android:id="@+id/btnNow"
+                    android:layout_width="90dp"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.10"
+                    android:background="@drawable/blank_btn2x"
+                    android:gravity="center"
+                    android:text="Now"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/login_as_guest_text_size" /> -->
+
+                <Button
+                    android:id="@+id/btnTimeRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/field_height"
+                    android:background="@drawable/blank_btn2x"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+            </LinearLayout>
+
+            <!-- <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/login_as_guest_text_size" /> -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_marginEnd="@dimen/login_blue_line_left_right_margin"
+                    android:layout_marginRight="@dimen/login_blue_line_left_right_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="Previous"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/field_height"
+                    android:layout_marginLeft="@dimen/login_blue_line_left_right_margin"
+                    android:layout_marginStart="@dimen/login_blue_line_left_right_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/blank_btn2x"
+                    android:text="Next"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

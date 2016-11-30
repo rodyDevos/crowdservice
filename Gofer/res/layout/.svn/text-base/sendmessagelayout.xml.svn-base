@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:background="@drawable/blue_top_bar"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/txtsendmsg"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sign_up_text_size" />
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/left"
+            android:drawableStart="@drawable/left"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sign_up_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="150"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/login_blue_line_bottom_margin"
+                android:paddingLeft="@dimen/login_blue_line_bottom_margin"
+                android:paddingRight="@dimen/login_blue_line_bottom_margin" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtto"
+                        android:textSize="@dimen/agreement_text_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_customer"
+                        android:layout_width="@dimen/register_prof_pic_size"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/agreement_text_text_size" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/category_width"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_progressbar"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="@string/txtsendmessagecomment"
+                    android:lines="7"
+                    android:padding="5dp"
+                    android:prompt="@string/spinner_title"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp" >
+
+                    <com.synapse.gofer.control.RoundedImageView
+                        android:id="@+id/imgPhoto"
+                        android:layout_width="@dimen/login_with_fb_width"
+                        android:layout_height="@dimen/login_with_fb_width"
+                        android:padding="10dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bgwhite"
+                        app:riv_border_width="3dip"
+                        app:riv_corner_radius="20dip"
+                        app:riv_oval="false" />
+
+                    <ImageView
+                        android:id="@+id/btnCamera"
+                        android:layout_width="@dimen/login_with_fb_height"
+                        android:layout_height="@dimen/login_with_fb_height"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                        android:src="@drawable/camera" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp" >
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="@dimen/login_signin_left_right_padding"
+                        android:layout_height="@dimen/field_height"
+                        android:layout_marginLeft="@dimen/login_blue_line_left_right_margin"
+                        android:layout_marginStart="@dimen/login_blue_line_left_right_margin"
+                        android:layout_weight="1"
+                        android:background="@drawable/blank_btn2x"
+                        android:text="@string/txtsend"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/login_as_guest_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_edit="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="${packageName}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#000000"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/round_gofer22" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Gofer"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="Requesting Service"
+            android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="22dp"
+        android:background="@drawable/round_button"
+        android:onClick="Stripe_register"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnRegister"
+        android:layout_alignRight="@+id/btnRegister"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edittext"
+        android:editable="false"
+        android:ems="10"
+        android:hint="Email" />
+
+    <br.com.sapereaude.maskedEditText.MaskedEditText
+        android:id="@+id/exp_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/card_number"
+        android:layout_below="@+id/card_number"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/cvc_number"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="MM/YYYY"
+        android:inputType="number"
+        custom_edit:mask="##/####" />
+
+    <br.com.sapereaude.maskedEditText.MaskedEditText
+        android:id="@+id/cvc_number"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/exp_date"
+        android:layout_alignRight="@+id/card_number"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="CVC"
+        android:inputType="number"
+        custom_edit:mask="####" />
+
+    <br.com.sapereaude.maskedEditText.MaskedEditText
+        android:id="@+id/card_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/email"
+        android:layout_alignRight="@+id/email"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="Card number"
+        android:inputType="number"
+        custom_edit:mask="#### #### #### ####" >
+
+        <requestFocus />
+    </br.com.sapereaude.maskedEditText.MaskedEditText>
+
+    <ProgressBar
+        android:id="@+id/stripe_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnRegister"
+        android:layout_below="@+id/cvc_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dip"
+        android:visibility="invisible" />
+
+</RelativeLayout>

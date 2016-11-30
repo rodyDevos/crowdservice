@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/popup_window_border"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="Gofer"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Please click on given options."
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="#fff" />
+
+        <Button
+            android:id="@+id/btnMarkerProfile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Profile"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </Button>
+
+        <View
+            android:id="@+id/contactline"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#fff" />
+
+        <Button
+            android:id="@+id/btnMarkerContact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Contact"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </Button>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#fff" />
+
+        <Button
+            android:id="@+id/btnMarkerCancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Cancel"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

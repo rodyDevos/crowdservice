@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/layout_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+	    android:background="@color/light_yello" >
+	    <LinearLayout
+	        
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:layout_centerVertical="true"
+	        android:orientation="vertical"
+	        android:padding="@dimen/size_padding_10"
+	        android:layout_weight="1"
+	        android:layout_marginRight="5dp" >
+	        
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:singleLine="true"
+		            android:text="From: "
+		            android:textColor="@android:color/black"
+		            android:textSize="@dimen/mailbox_title_text_size"
+		             />
+		
+		        <TextView
+		            android:id="@+id/txtFromUserName"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:singleLine="true"
+		            android:text=""
+		            android:textColor="@android:color/black"
+		            android:textSize="@dimen/mailbox_title_text_size"
+		            android:textStyle="bold" />
+			            
+		    </LinearLayout>
+		    
+		    <TextView
+	            android:id="@+id/txtQuestion"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingTop="@dimen/agreement_text_bottom_padding"
+	            android:singleLine="true"
+	            android:text=""
+	            android:textColor="@android:color/black"
+	            android:textSize="@dimen/sign_up_text_size" />
+		</LinearLayout>
+		<Button 
+		    android:id="@+id/btnReply"
+		    android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:background="@drawable/mail_reply_active"
+	        android:layout_marginRight="5dp"/>
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/layout_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_question"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="@dimen/size_padding_10" >
+	    
+	    <TextView
+            android:id="@+id/txtAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/agreement_text_bottom_padding"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sign_up_text_size"
+            android:layout_marginLeft="@dimen/size_padding_10"
+            android:layout_marginStart="@dimen/size_padding_10" />
+	</LinearLayout>
+</RelativeLayout>

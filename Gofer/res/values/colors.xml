@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="login_page_link">#6EB5E5</color>
+    
+    <color name="text_color">#FFFFFF</color>
+    <color name="hint_color">#C5C5CB</color>
+    <color name="light_gray">#DDDDDD</color>
+    <color name="dark_gray">#333333</color>
+    <color name="gray">#ABABAB</color>
+    <color name="blue">#4198FF</color>
+    <color name="light_blue">#519FFD</color>
+    <color name="dark_pink">#FF204A</color>
+    <color name="bg_color">#EAEAEA</color>
+    <color name="category_blue">#007AFF</color>
+    <color name="bid_type_normal">#4B84A7</color>
+    <color name="bid_type_normal_light">#14699b</color>
+    <color name="bid_type_pressed">#0B5A71</color>
+    <color name="radio_button_selected_color">#ff33b5e5</color>
+    <color name="light_yello">#F4EF89</color>
+    <!-- <color name="radio_button_unselected_color">@android:color/transparent</color> -->
+    
+    <color name="radio_button_unselected_color">#FFFFFF</color>
+    <color name="bg_color_red">#F23E3F</color>
+
+</resources>

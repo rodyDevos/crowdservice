@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/txtScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@color/light_gray"
+            android:columnCount="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/light_gray" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Review and Confirm"
+                    android:textColor="@color/dark_pink"
+                    android:textSize="@dimen/agreement_text_text_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/gray"
+                android:orientation="vertical" 
+                android:paddingLeft = "2dp"
+                android:paddingRight="2dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray" >
+                </TextView>
+                
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_padding_5"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/center_line"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/lbCategoryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:padding="0dp"
+                        android:text="Category Name "
+                        android:textColor="@color/app_text_color"
+                        android:textSize="@dimen/review_list_text_size"
+                         />
+                    <TextView
+                        android:id="@+id/txtCategoryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/center_line"
+                        android:layout_toRightOf="@+id/center_line"
+                        android:padding="0dp"
+                        android:text=""
+                        android:textColor="@color/app_text_color2"
+                        android:textSize="@dimen/review_list_text_size"
+                        android:layout_below="@+id/lbCategoryName"
+                         />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray" >
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_padding_5"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/center_line1"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/lbJobName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="1dp"
+                        android:padding="0dp"
+                        android:text="Job Name"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="@dimen/review_list_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtJobName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/center_line1"
+                        android:padding="0dp"
+                        android:text=""
+                        android:textColor="@color/app_text_color2"
+                        android:textSize="@dimen/review_list_text_size"
+                        android:layout_below="@+id/lbJobName" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray" >
+                </TextView>
+
+                <!-- <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/login_blue_line_left_right_margin" >
+
+                    <TextView
+                        android:id="@+id/center_line11"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/lbStartDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginLeft="1dp"
+                        android:padding="0dp"
+                        android:text="Start Date"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="@dimen/review_list_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtStartDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/center_line11"
+                        android:padding="0dp"
+                        android:text=""
+                        android:textColor="@color/app_text_color2"
+                        android:textSize="@dimen/review_list_text_size"
+                        android:layout_below="@+id/lbStartDate" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#000000" >
+                </TextView> -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_padding_5"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/center_line112"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/lbEndDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginLeft="1dp"
+                        android:padding="0dp"
+                        android:text="End Date"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="@dimen/review_list_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtEndDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/center_line112"
+                        android:padding="0dp"
+                        android:text=""
+                        android:textColor="@color/app_text_color2"
+                        android:textSize="@dimen/review_list_text_size"
+                        android:layout_below="@+id/lbEndDate" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray" >
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_padding_5"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/center_line111"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/lbStartingAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="1dp"
+                        android:padding="0dp"
+                        android:text="Start Address"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="@dimen/review_list_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtStartingAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/center_line111"
+                        android:padding="0dp"
+                        android:text=""
+                        android:textColor="@color/app_text_color2"
+                        android:textSize="@dimen/review_list_text_size"
+                        android:layout_below="@+id/lbStartingAddress" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray" >
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_padding_5"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/center_line1113"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/lbEndAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginLeft="1dp"
+                        android:padding="0dp"
+                        android:text="End Address"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="@dimen/review_list_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtEndAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/center_line1113"
+                        android:padding="0dp"
+                        android:text=""
+                        android:textColor="@color/app_text_color2"
+                        android:textSize="@dimen/review_list_text_size"
+                        android:layout_below="@+id/lbEndAddress" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray" >
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_padding_5"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/center_line1114"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/lbJobPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginLeft="1dp"
+                        android:padding="0dp"
+                        android:text="Merchandize Price"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="@dimen/review_list_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtJobPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/center_line1114"
+                        android:padding="0dp"
+                        android:text=""
+                        android:textColor="@color/app_text_color2"
+                        android:textSize="@dimen/review_list_text_size"
+                        android:layout_below="@+id/lbJobPrice" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray" >
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_padding_5"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/center_line11145"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/lbComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="1dp"
+                        android:padding="0dp"
+                        android:text="Comments/Instructions"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="@dimen/review_list_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/center_line11145"
+                        android:padding="0dp"
+                        android:text=""
+                        android:textColor="@color/app_text_color2"
+                        android:textSize="@dimen/review_list_text_size"
+                        android:layout_below="@+id/lbComment" />
+                </RelativeLayout>
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray" >
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/rlthumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_padding_5"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/center_line11146"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/lbThumbnail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="1dp"
+                        android:padding="0dp"
+                        android:text="Thumbnail"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="@dimen/review_list_text_size" />
+
+                    <ImageView
+			            android:id="@+id/img_attach"
+			            android:layout_width="@dimen/thumbnail_height"
+                    	android:layout_height="@dimen/thumbnail_height"
+			            android:layout_toRightOf="@+id/center_line11146"
+			            android:textColor="@android:color/white"
+			            android:textSize="@dimen/login_as_guest_text_size" />
+                    
+                    <!-- <TextView
+                        android:id="@+id/txtThumbnail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/center_line11146"
+                        android:padding="0dp"
+                        android:text=""
+                        android:textColor="@color/app_text_color2"
+                        android:textSize="@dimen/review_list_text_size"
+                        android:layout_below="@+id/lbThumbnail" /> -->
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/login_blue_line_left_right_margin"
+        android:layout_marginLeft="@dimen/login_blue_line_top_margin"
+        android:layout_marginRight="@dimen/login_blue_line_top_margin"
+        android:layout_marginTop="5dp"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/field_height"
+            android:layout_marginEnd="@dimen/login_blue_line_left_right_margin"
+            android:layout_marginRight="@dimen/login_blue_line_left_right_margin"
+            android:layout_weight="1"
+            android:background="@drawable/blank_btn2x"
+            android:text="Previous"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_as_guest_text_size" />
+
+        <Button
+            android:id="@+id/btnRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/field_height"
+            android:layout_marginLeft="@dimen/login_blue_line_left_right_margin"
+            android:layout_marginStart="@dimen/login_blue_line_left_right_margin"
+            android:layout_weight="1"
+            android:background="@drawable/blank_btn2x"
+            android:text="Next"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_as_guest_text_size" />
+
+        <!-- <ImageView
+            android:id="@+id/img_attach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_blue_line_left_right_margin"
+            android:layout_marginStart="@dimen/login_blue_line_left_right_margin"
+            android:src="@drawable/attachement"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_as_guest_text_size" /> -->
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical" >
+
+    <com.synapse.gofer.control.SegmentedGroup
+        android:id="@+id/segmented2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        segmentedgroup:sc_border_width="1dp"
+        segmentedgroup:sc_checked_text_color="@android:color/white"
+        segmentedgroup:sc_corner_radius="5dp"
+        segmentedgroup:sc_tint_color="@color/category_blue" >
+
+        <RadioButton
+            android:id="@+id/btnJobDetails"
+            style="@style/RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Job Details"
+            android:textSize="@dimen/agreement_text_text_size" />
+
+        <RadioButton
+            android:id="@+id/btnCustomerDetails"
+            style="@style/RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Customer Details"
+            android:textSize="@dimen/agreement_text_text_size" />
+    </com.synapse.gofer.control.SegmentedGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/field_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/login_blue_line_left_right_margin"
+        android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+        android:background="@drawable/segment_bg"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:visibility="gone" >
+
+        <Button
+            android:layout_width="@dimen/register_prof_pic_size"
+            android:layout_height="match_parent"
+            android:background="@drawable/courier_bg"
+            android:paddingLeft="@dimen/register_edittext_top_margin"
+            android:paddingRight="@dimen/register_edittext_top_margin"
+            android:text="Job Details"
+            android:textColor="@color/courier_text_color"
+            android:textSize="@dimen/login_as_guest_text_size" />
+
+        <Button
+            android:layout_width="@dimen/register_prof_pic_size"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_bg"
+            android:paddingLeft="@dimen/register_edittext_top_margin"
+            android:paddingRight="@dimen/register_edittext_top_margin"
+            android:text="Customer Details"
+            android:textColor="@color/courier_text_color"
+            android:textSize="@dimen/login_as_guest_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/job_customer_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="90"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/apply_for_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_blank2x"
+            android:text="Bid on Job"
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/ques_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/login_blue_line_left_right_margin"
+            android:layout_marginStart="@dimen/login_blue_line_left_right_margin"
+            android:background="@drawable/btn_blank2x"
+            android:text="\?"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_as_guest_text_size"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/attachement"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

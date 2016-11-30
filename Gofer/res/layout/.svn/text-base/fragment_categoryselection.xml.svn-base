@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_white" >
+
+    <ImageView
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/field_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/login_blue_line_top_margin"
+        android:src="@drawable/next" />
+
+    <Button
+        android:id="@+id/btnSendNewCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:background="#6D7B8D"
+        android:focusable="true"
+        android:text="Suggest a new category"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Select a Category"
+                android:textColor="@color/dark_pink"
+                android:textSize="@dimen/agreement_text_text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/step1x"
+                android:textColor="@android:color/white"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_blue_line_left_right_margin"
+            android:layout_marginRight="@dimen/login_blue_line_left_right_margin"
+            android:orientation="vertical" >
+
+            <com.synapse.gofer.control.SegmentedGroup
+                android:id="@+id/segmented2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                segmentedgroup:sc_border_width="1dp"
+                segmentedgroup:sc_checked_text_color="@android:color/white"
+                segmentedgroup:sc_corner_radius="5dp"
+                segmentedgroup:sc_tint_color="@color/category_blue" >
+
+                <RadioButton
+                    android:id="@+id/btnCourier"
+                    style="@style/RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Courier"
+                    android:textSize="@dimen/agreement_text_text_size" />
+
+                <RadioButton
+                    android:id="@+id/btnHome"
+                    style="@style/RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Home"
+                    android:textSize="@dimen/agreement_text_text_size" />
+
+                <RadioButton
+                    android:id="@+id/btnAuto"
+                    style="@style/RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Auto"
+                    android:textSize="@dimen/agreement_text_text_size" />
+            </com.synapse.gofer.control.SegmentedGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/field_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/login_blue_line_left_right_margin"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/segment_bg"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone" >
+
+                <Button
+                    android:layout_width="@dimen/category_width"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/courier_bg"
+                    android:paddingLeft="@dimen/register_edittext_top_margin"
+                    android:paddingRight="@dimen/register_edittext_top_margin"
+                    android:text="Courier"
+                    android:textColor="@color/courier_text_color"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <Button
+                    android:layout_width="@dimen/category_width"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/home_bg"
+                    android:paddingLeft="@dimen/register_edittext_top_margin"
+                    android:paddingRight="@dimen/register_edittext_top_margin"
+                    android:text="Home"
+                    android:textColor="@color/courier_text_color"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+
+                <Button
+                    android:layout_width="@dimen/category_width"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/home_bg"
+                    android:paddingLeft="@dimen/register_edittext_top_margin"
+                    android:paddingRight="@dimen/register_edittext_top_margin"
+                    android:text="Auto"
+                    android:textColor="@color/courier_text_color"
+                    android:textSize="@dimen/login_as_guest_text_size" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/field_height"
+                android:layout_marginTop="@dimen/login_blue_line_left_right_margin"
+                android:background="@drawable/dropdown_bg_gray"
+                android:dropDownWidth="match_parent"
+                android:prompt="@string/spinner_title" />
+
+            <EditText
+                android:id="@+id/edtJobname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/field_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/login_with_fb_height"
+                android:background="@drawable/input12x"
+                android:hint="Enter Job Title:"
+                android:padding="3dip"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/login_as_guest_text_size"
+                android:textStyle="bold" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtMerchandiseCost"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/field_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/login_blue_line_bottom_margin"
+                android:background="@drawable/input12x"
+                android:hint="Enter Merchandize cost(if any)"
+                android:inputType="number"
+                android:padding="3dip"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/login_as_guest_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
